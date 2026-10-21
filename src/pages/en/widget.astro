@@ -1,0 +1,25 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { SITE_URL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { breadcrumbSchema } from '../../lib/seo';
+const lang = 'en';
+const code = `<iframe src="${SITE_URL}/embed/zakat/" title="Zakat calculator with today's nisab" width="100%" height="1100" style="border:0;max-width:1100px" loading="lazy"></iframe>`;
+const codeAr = `<iframe src="${SITE_URL}/embed/zakat-ar/" title="حاسبة الزكاة بنصاب اليوم" width="100%" height="1100" style="border:0;max-width:1100px" loading="lazy"></iframe>`;
+---
+<PageLayout title="Embed the zakat calculator with today’s nisab on your site" description="Mosques, Islamic schools and community sites can embed the zakat calculator, in English or Arabic, with one line. The nisab follows the price of gold and silver each day; no cookie set." lang={lang} noindex={true} jsonLd={[breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'Embed the calculator', path: route('widget', lang) }])]} breadcrumbs={[{ label: 'Embed the calculator' }]} showAuthor={false}>
+  <header class="mb-6">
+    <h1 class="font-serif text-3xl font-bold text-navy-900 md:text-4xl">Embed the zakat calculator on your site</h1>
+    <p class="mt-3 text-lg text-navy-700">One line of code. The nisab inside the frame follows the price of gold and silver of the day.</p>
+  </header>
+  <div class="prose prose-slate max-w-none">
+    <p>Conditions: keep the credit line under the frame visible, do not change the frame, and do not place it next to a donation button or an appeal, so that readers do not take the calculator for part of a collection. The frame sets no cookie and sends us nothing about your readers. Questions go through the <a href={route('contact', lang)}>contact page</a>.</p>
+    <h2>In English</h2>
+    <pre class="overflow-x-auto rounded-lg bg-navy-900 p-4 text-sm text-white" dir="ltr"><code>{code}</code></pre>
+    <h2>In Arabic</h2>
+    <pre class="overflow-x-auto rounded-lg bg-navy-900 p-4 text-sm text-white" dir="ltr"><code>{codeAr}</code></pre>
+  </div>
+  <div class="mt-8 overflow-hidden rounded-xl border border-navy-200">
+    <iframe src="/embed/zakat/" title="Zakat calculator with today's nisab" width="100%" height="1100" style="border:0" loading="lazy"></iframe>
+  </div>
+</PageLayout>

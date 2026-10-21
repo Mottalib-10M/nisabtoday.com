@@ -1,0 +1,24 @@
+# Dar al-Ifta al-Misriyyah : autorité de fatwa officielle de la République arabe d'Égypte (nisab, bijoux, zakat al-fitr).
+dar-alifta.org
+# Dar al-Iftaa du Royaume hachémite de Jordanie : département public des fatwas (nisab de 85 g, décision 331 sur la zakat al-fitr).
+aliftaa.jo
+# Académie internationale du fiqh islamique (OCI) : résolutions sur les actions, pensions, immobilier et dettes.
+iifa-aifi.org
+# PPZ-MAIWP : centre de collecte de la zakat du Conseil religieux islamique des Territoires fédéraux (Malaisie), organe statutaire.
+zakat.com.my
+# Kuwait Zakat House : organisme public koweïtien de la zakat (loi n° 5 de 1982), nisab en or 24 carats.
+zakathouse.org.kw
+# BAZNAS : agence nationale de la zakat d'Indonésie (loi n° 23 de 2011), montants de zakat fitrah et fidyah 1447.
+baznas.go.id
+# Fiqh Council of North America : conseil de fiqh, montants de fidyah et zakat al-fitr 2026 (aucune collecte sur la page).
+fiqhcouncil.org
+# Islamweb : portail de fatwas du ministère des Awqaf du Qatar (cas d'héritage publiés, dettes, fidya).
+islamweb.net
+# Coran (texte et traduction Saheeh International) : source première des parts d'héritage et des bénéficiaires.
+quran.com
+# Sahih al-Bukhari : recueil de hadiths, source du nisab et de la zakat al-fitr.
+sunnah.com
+# Majlis Ugama Islam Singapura : conseil religieux statutaire de Singapour (fatwa sur les bijoux, taux 1447).
+muis.gov.sg
+# Agence de presse d'État du Pakistan, qui publie les décisions du Council of Islamic Ideology et de l'Administrator General Zakat.
+app.com.pk

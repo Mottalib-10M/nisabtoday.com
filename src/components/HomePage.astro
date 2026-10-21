@@ -1,0 +1,72 @@
+---
+/**
+ * Home of one language: the full zakat calculator first, then the nisab of the day in twenty currencies, the
+ * folded answer, the dates of the coming lunar year, the body, the pages by subject. Text: src/content/home.ts.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import Clamp from './Clamp.astro';
+import Tool from './Tool.astro';
+import { HOME, homeResume, boardRows } from '../content/home';
+import { route, hasRoute, type Locale } from '../i18n/routes';
+import { GROUPS, label } from '../i18n/nav';
+import { helpers, sourceOf, table } from '../lib/helpers';
+import { GUIDES } from '../lib/pages';
+import { faqSchema, organizationSchema, websiteSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const x = HOME[lang];
+const path = route('home', lang);
+const h = helpers(lang);
+const ar = lang === 'ar';
+const sources = x.sources.map((k) => sourceOf(k, lang));
+const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(x.faqs, lang)];
+const resume = homeResume(lang, h);
+const hw = h.hawl(h.PRICE_DAY);
+const dates: Array<[string, string]> = [
+  [h.day(h.PRICE_DAY), ar ? `اليوم، ${h.hijri(h.PRICE_DAY)}` : `Today, ${h.hijri(h.PRICE_DAY)}`],
+  [h.day(h.ramadan1448), ar ? 'أول رمضان 1448 بتقويم أم القرى؛ يُعلن قبله مقدار زكاة الفطر لعام 1448' : 'First day of Ramadan 1448 (Umm al-Qura); zakat al-fitr amounts for 1448 are announced before it'],
+  [h.day(h.shawwal1448), ar ? 'عيد الفطر 1448: آخر وقت لإخراج زكاة الفطر قبل الصلاة' : 'Eid al-Fitr 1448: zakat al-fitr is paid before the prayer'],
+  [h.day(hw.end), ar ? `نهاية حول يبدأ اليوم (${hw.days} يومًا)` : `End of a lunar year that starts today (${hw.days} days)`],
+];
+const head = ar ? ['العملة', 'نصاب الفضة', 'نصاب الذهب', 'غرام الذهب 24'] : ['Currency', 'Silver nisab', 'Gold nisab', 'Gold, 1 g (24 ct)'];
+---
+<PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={x.faqs} sources={sources}>
+  <header class="mb-4">
+    <h1 class="font-serif text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{x.h1}</h1>
+    <p class="mt-2 text-base text-navy-700 sm:text-lg">{x.intro}</p>
+  </header>
+  <div data-outil data-chrome><Tool kind="zakat" idPrefix="home" lang={lang} /></div>
+  <p class="mt-3 text-sm text-navy-600">{x.trust} · <a href={route('method', lang)} class="underline">{label('method', lang)}</a> · <a href={route('about', lang)} class="underline">{label('about', lang)}</a></p>
+
+  <Clamp text={resume} lang={lang} id="clamp-home" class="my-8" />
+
+  <section class="my-10">
+    <h2 class="font-serif text-2xl font-bold text-navy-900">{x.boardTitle}</h2>
+    <p class="mt-2 text-navy-700">{x.boardIntro(h)}</p>
+    <Fragment set:html={table(head, boardRows(h), undefined, ['l', 'r', 'r', 'r'], lang)} />
+  </section>
+
+  <section class="prose prose-slate max-w-none prose-headings:font-serif"><Fragment set:html={x.body(h)} /></section>
+
+  <section class="mt-10">
+    <h2 class="font-serif text-2xl font-bold text-navy-900">{x.datesTitle}</h2>
+    <Fragment set:html={table(ar ? ['التاريخ', 'الحدث'] : ['Date', 'What happens'], dates, undefined, ['l', 'l'], lang)} />
+  </section>
+
+  <section class="mt-10" data-chrome>
+    <h2 class="font-serif text-2xl font-bold text-navy-900">{x.pagesTitle}</h2>
+    <div class="mt-4 grid gap-x-8 gap-y-6 md:grid-cols-2">
+      {GROUPS.map((g) => {
+        const list = GUIDES.filter((p) => p.group === g.id && hasRoute(p.id, lang));
+        return list.length > 0 && (
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-navy-600">{g.label[lang]}</h3>
+            <ul class="mt-2 divide-y divide-navy-100 text-sm">
+              {list.map((p) => <li class="py-2"><a href={route(p.id, lang)} class="font-medium text-accent-700 underline-offset-2 hover:underline">{p[lang]!.nav}</a><span class="block text-navy-600">{p[lang]!.card}</span></li>)}
+            </ul>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+</PageLayout>

@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { CONTACT_EMAIL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('contact', lang);
+const description = 'Write to the publisher of Zakat Calculator about a nisab, a rule, a published amount or a source. E-mail only, no fatwa on your own case, no donation asked.';
+---
+<PageLayout title="Contact Zakat Calculator: corrections to a rule or an amount" description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path, lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Contact</h1>
+    <p>By e-mail: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. No form and no newsletter: the site collects no zakat and sells nothing, so it has no reason to keep addresses.</p>
+    <h2>Messages that help</h2>
+    <ul>
+      <li>A zakat al-fitr, fidya or kaffarah amount that a council or zakat body has published or changed, with the link to its announcement.</li>
+      <li>A rule shown on a page that differs from the source it cites, with the passage.</li>
+      <li>An inheritance case where the calculator gives a share different from a published answer, with the heirs and the reference.</li>
+      <li>Embedding a calculator on a mosque, community or school site: the code is on the <a href={route('widget', lang)}>embed page</a>.</li>
+    </ul>
+    <h2>What we cannot do</h2>
+    <p>We give no fatwa and cannot rule on your own case, collect or pass on your zakat, or recommend a charity. For your situation, ask a scholar you trust; for an estate governed by the law of your country, a notary or the court in charge.</p>
+    <h2>Publisher</h2>
+    <LegalIdentity lang={lang} />
+  </div>
+</PageLayout>

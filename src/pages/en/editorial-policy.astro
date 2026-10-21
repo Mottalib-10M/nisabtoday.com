@@ -1,0 +1,21 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { AUTHOR_NAME, REVIEW_CYCLE_MONTHS } from '../../data/site-config';
+const lang = 'en';
+---
+<PageLayout title="Editorial policy of Zakat Calculator: sources, figures and fixes" description="How Zakat Calculator writes its pages: Qur’an, hadith, published fatwas and official zakat bodies only, every figure read from a data file, both views shown where scholars differ." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Editorial policy</h1>
+    <h2>What counts as a source</h2>
+    <p>The Qur’an and the hadith collections; resolutions of the International Islamic Fiqh Academy; fatwas of official councils such as Dar al-Ifta of Egypt and the General Iftaa Department of Jordan; laws and regulations such as the Zakat and Ushr Ordinance of Pakistan and the zakat regulations of Saudi Arabia; official zakat bodies such as the zakat centre of the Federal Territories of Malaysia, BAZNAS in Indonesia and MUIS in Singapore. For yearly amounts, the announcement of the body that set them, or the state news agency reporting it. Charity websites, blogs and forums are read to know what people ask, never as the source of a rule or a number, and no charity is linked.</p>
+    <h2>How a figure reaches a page</h2>
+    <p>No amount is typed into the text. Data files hold each weight, rate and published amount with its source and the date it was read; the calculators and the pages read those files. Gold and silver prices and exchange rates are read once a day and checked against bounds before they are written. The inheritance engine is tested against more than fifteen cases whose answers are published, and the build stops if one of them drifts.</p>
+    <h2>Differences of opinion</h2>
+    <p>Where the schools of law differ in a way that changes the amount, worn jewellery, locked pensions, shares held for dividends, debts, the mushtaraka case, the page shows each view with its source and the calculator lets you switch. The site does not choose for you and does not present any view as the only one. For your own case, ask a scholar you trust.</p>
+    <h2>Independence</h2>
+    <p>{AUTHOR_NAME} receives nothing from charities, zakat collectors, banks or Islamic finance providers and links to none of them. There is no donation button and no advertising today; if advertising is added it will be labelled and will never come from a body that collects zakat or donations.</p>
+    <h2>Review and corrections</h2>
+    <p>The site is reviewed at least every {REVIEW_CYCLE_MONTHS} months, and in any case before each Ramadan, when the bodies publish the amounts of zakat al-fitr, fidya and kaffarah for the new year. A reported error is checked against the source and, once fixed, moves the date shown on the page. Write through the <a href={route('contact', lang)}>contact page</a>; the calculations are explained on the <a href={route('method', lang)}>method page</a>.</p>
+  </div>
+</PageLayout>

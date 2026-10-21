@@ -1,0 +1,10 @@
+---
+/** Every topic page in Arabic (src/content/guides). */
+import ContentPage from '../../components/ContentPage.astro';
+import { guidesIn } from '../../lib/pages';
+export function getStaticPaths() {
+  return guidesIn('ar').map((page) => ({ params: { slug: page.ar!.slug }, props: { def: page } }));
+}
+const { def } = Astro.props;
+---
+<ContentPage page={def} lang="ar" />

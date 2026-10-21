@@ -1,0 +1,59 @@
+---
+/** Method: every rule, every formula, the data, the tests, the limits. Figures from the kit. */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { helpers } from '../../lib/helpers';
+import { breadcrumbSchema, webPageSchema } from '../../lib/seo';
+const lang = 'en';
+const h = helpers(lang);
+const path = route('method', lang);
+const title = 'Zakat Calculation Method 2026: Nisab, Rates and Sources';
+const description = 'How the 2026 zakat, fitr and inheritance calculators work: daily gold and silver prices, nisab weights, the solar rate, each school’s view and the tested cases.';
+const P = h.P;
+const ex = h.zakat({ cur: 'USD', cash: 10000, goldG: 20, goldK: 22, debts: 1000, basis: 'silver' });
+const nCur = Object.keys(h.MARKET.fx).length;
+const nFitr = h.FITR.length;
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'How we calculate', description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'How we calculate', path }])]} breadcrumbs={[{ label: 'How we calculate' }]}>
+  <article class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>How the calculators work</h1>
+    <p>Every calculator on this site runs in your browser on one set of engines and a few data files: the price of gold and silver of the day, the exchange rates, the rules of {P.year} with their sources, and the amounts of zakat al-fitr, fidya and kaffarah published for Ramadan 1447. Rules were read on {h.day(P.retrieved_at)}; the metal prices in use are those of {h.priceDay}.</p>
+
+    <h2>1. Prices and exchange rates</h2>
+    <p>Once a day a script reads the spot price of gold (XAU) and silver (XAG) in US dollars per troy ounce from <Fragment set:html={h.src('gold-api')} />, whose terms allow commercial use, the euro reference rates of the <Fragment set:html={h.src('ecb', 'European Central Bank')} /> and, for currencies the ECB does not publish, the open rates of <Fragment set:html={h.src('erapi')} />. One troy ounce is 31.1034768 g. The script refuses to write when a price is outside plausible bounds or moves by more than a quarter in a day, so a bad answer never reaches the site. Rates are used to convert, never republished as a table. The spot price is the price of pure metal: a jeweller buys below it and sells above it. {nCur} currencies are available.</p>
+
+    <h2>2. The nisab</h2>
+    <p>The default weights are {h.nisabGrams('gold')} g of gold, twenty dinars of 4.25 g (<Fragment set:html={h.src('jordan-nisab', 'Jordan General Iftaa Department, fatwa 854')} />), and {h.nisabGrams('silver')} g of silver, two hundred dirhams (<Fragment set:html={h.src('ppz-silver', 'PPZ-MAIWP')} />). The second option applies the {h.dec(h.nisabGrams('gold', 'pk'))} g of gold and {h.dec(h.nisabGrams('silver', 'pk'))} g of silver of Pakistan’s <Fragment set:html={h.src('pk-ordinance', 'Zakat and Ushr Ordinance 1980')} />. The nisab in a currency is the weight times the price of one gram of pure metal in that currency. Today the silver nisab is {h.money(h.nisab('silver', 'USD'), 'USD')} and the gold nisab {h.money(h.nisab('gold', 'USD'), 'USD')}. Silver is the default measure; you can switch to gold on every calculator.</p>
+
+    <h2>3. The rate and the year</h2>
+    <p>Zakat is {h.pct(P.rate.lunar)} of the zakatable wealth after a lunar year of about {P.rate.lunarDays} days. For a solar year the calculator uses the rule written in article 15 of the <Fragment set:html={h.src('zatca-reg', 'Saudi implementing regulations for zakat collection')} />: 2.5 % divided by the days of the Hijri year and multiplied by the days of the year counted, {h.pct(P.rate.solar, 4)} for {P.rate.solarDays} days. Lunar dates follow the Umm al-Qura calendar as computed by your browser; where the month begins by sighting the moon, a date can differ by a day.</p>
+
+    <h2>4. What is added, what is taken off</h2>
+    <p>The zakat calculator adds cash and bank balances, gold and silver at their pure metal content, shares, the pension you could withdraw, business stock and money owed to you that you expect to recover. It takes off debts due now unless you switch that rule off. If the net reaches the nisab, the whole net is multiplied by the rate. Example: {h.money(10000, 'USD')} in the bank, 20 g of 22 carat gold and {h.money(1000, 'USD')} of bills due give a net of {h.money(ex.net, 'USD')} and zakat of {h.money(ex.zakat, 'USD')} on the silver nisab.</p>
+    <ul>
+      <li><strong>Worn jewellery:</strong> counted on the Hanafi view, exempt on the Maliki, Shafi‘i and Hanbali view (<Fragment set:html={h.src('egypt-jewel', 'Dar al-Ifta, fatwa 22484')} />). Your choice.</li>
+      <li><strong>Shares held to resell:</strong> market value. <strong>Held for dividends:</strong> the share of the company’s zakatable assets you enter, by default the whole value (<Fragment set:html={h.src('iifa-shares', 'IIFA resolution 28')} />, <Fragment set:html={h.src('iifa-shares-income', 'resolution 121')} />).</li>
+      <li><strong>Pensions:</strong> yearly on what you could withdraw after penalty and tax, or once when paid out (<Fragment set:html={h.src('iifa-pension', 'IIFA resolution 143')} />, <Fragment set:html={h.src('ppz-epf', 'PPZ-MAIWP on EPF')} />).</li>
+      <li><strong>Rental property:</strong> no zakat on the property, zakat on the rent saved (<Fragment set:html={h.src('iifa-property', 'IIFA resolution 2')} />).</li>
+      <li><strong>Debts:</strong> deducted on the majority view, not on the newer Shafi‘i view (<Fragment set:html={h.src('islamweb-debts', 'Islamweb 47139')} />).</li>
+      <li><strong>Crypto:</strong> counted like trade goods at market value, on the fatwa gazetted in the Federal Territories of Malaysia (<Fragment set:html={h.src('ppz-digital', 'PPZ-MAIWP')} />).</li>
+    </ul>
+
+    <h2>5. Zakat al-fitr, fidya and kaffarah</h2>
+    <p>The data file holds {nFitr} amounts published for Ramadan 1447 (2026) by fatwa councils, ministries and statutory zakat bodies, each with its date and a link to the announcement or to the state news agency that reported it. Zakat al-fitr is the published amount times the people in the household. Fidya is the published amount per day times the days that cannot be made up. Kaffarah uses the amount per poor person fed: sixty for a broken fast, ten for an oath. Where no body of your country published an amount, enter your own. The amounts of 1448 (2027) are not invented: they are shown as to be published until the bodies announce them before Ramadan.</p>
+
+    <h2>6. Inheritance</h2>
+    <p>The engine gives each heir present the fixed share of the Qur’an (<Fragment set:html={h.src('quran-4-11', '4:11')} />, <Fragment set:html={h.src('quran-4-12', '4:12')} />, <Fragment set:html={h.src('quran-4-176', '4:176')} />), applies the exclusions (hajb), gives the remainder to the residuary heirs, two shares to a male for one to a female, and works with exact fractions. If the fixed shares exceed the estate, they are reduced in proportion (‘awl); if something is left with no residuary, it returns to the heirs other than the spouse (radd). The two ‘umariyya cases give the mother a third of what remains after the spouse. The mushtaraka case is computed both ways. With a grandfather and brothers or sisters, the engine follows Abu Hanifa (the grandfather excludes them) and says so; the other schools let them share. Debts are paid first, then the bequest up to one third.</p>
+    <p>The engine is tested at every build against published answers: al-minbariyya (<Fragment set:html={h.src('islamweb-minbariyya', 'Islamweb 359851')} />), the ‘umariyya cases (<Fragment set:html={h.src('islamweb-umariyya', '15603')} />, <Fragment set:html={h.src('islamweb-umariyya2', '171453')} />), al-mushtaraka (<Fragment set:html={h.src('islamweb-mushtaraka', '204760')} />), ‘awl with sisters (<Fragment set:html={h.src('islamweb-awl', '48741')} />), radd with and without a spouse (<Fragment set:html={h.src('islamweb-radd', '319204')} />, <Fragment set:html={h.src('islamweb-radd-wife', '127741')} />, <Fragment set:html={h.src('islamweb-radd-husband', '227083')} />), the daughter, son’s daughter and sister of <Fragment set:html={h.src('bukhari-6736', 'Bukhari 6736')} />, and the mother brought to a sixth by excluded brothers (<Fragment set:html={h.src('islamweb-mother', '409885')} />).</p>
+
+    <h2>7. What is not modelled</h2>
+    <ul>
+      <li>Zakat on crops, livestock, minerals and buried treasure.</li>
+      <li>Nephews, paternal uncles, cousins and distant kindred in the inheritance calculator; it says when they would take the remainder.</li>
+      <li>The grandfather sharing with siblings on the Maliki, Shafi‘i and Hanbali view, and the akdariyya case that follows from it.</li>
+      <li>The rules of a national law that departs from the classical shares; a court or notary applies them.</li>
+      <li>Any amount for 1448 (2027) before it is published.</li>
+    </ul>
+    <p>Corrections: <a href={route('contact', lang)}>contact page</a>. These are calculations from published rules, not a fatwa; for your own case, ask a scholar you trust.</p>
+  </article>
+</PageLayout>

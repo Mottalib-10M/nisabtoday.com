@@ -1,0 +1,411 @@
+{
+ "_readme": "Montants publiés pour Ramadan 1447 (février-mars 2026), un par organisme officiel ou conseil de fiqh, relus le 2026-10-21 (notes : research/fitr-fidya-kaffarah-1447.md). Aucun organisme caritatif. Montants 1448 (2027) : à paraître avant Ramadan.",
+ "retrieved_at": "2026-10-21",
+ "rows": [
+  {
+   "id": "uae",
+   "country": {
+    "en": "United Arab Emirates",
+    "ar": "الإمارات"
+   },
+   "body": {
+    "en": "UAE Council for Fatwa",
+    "ar": "مجلس الإمارات للإفتاء الشرعي"
+   },
+   "cur": "AED",
+   "fitr": 25,
+   "fidya": 20,
+   "kaffarah": 20,
+   "basis": {
+    "en": "2.5 kg of rice a person; fidya 3.25 kg of wheat a day; kaffarah AED 1,200 for 60 poor people (fast), AED 200 for 10 (oath)",
+    "ar": "2.5 كغ من الأرز عن الفرد؛ الفدية 3.250 كغ من البر عن اليوم؛ كفارة إفساد الصوم 1,200 درهم لستين مسكينًا وكفارة اليمين 200 درهم لعشرة"
+   },
+   "date": "2026-02-08",
+   "year": "1447",
+   "url": "https://gulfnews.com/uae/uae-fatwa-council-sets-ramadan-2026-zakat-al-fitr-and-fidyah-values-1.500436380",
+   "via": {
+    "en": "Gulf News",
+    "ar": "صحيفة غلف نيوز"
+   }
+  },
+  {
+   "id": "pakistan",
+   "country": {
+    "en": "Pakistan",
+    "ar": "باكستان"
+   },
+   "body": {
+    "en": "Council of Islamic Ideology",
+    "ar": "مجلس الفكر الإسلامي"
+   },
+   "cur": "PKR",
+   "fitr": 300,
+   "fidya": 300,
+   "basis": {
+    "en": "Minimum, on wheat (about 2 kg). Barley Rs 1,100, dates Rs 1,600, raisins Rs 3,800; fidya Rs 9,000 for 30 fasts on wheat",
+    "ar": "الحد الأدنى على القمح (نحو 2 كغ). الشعير 1,100 روبية، التمر 1,600، الزبيب 3,800؛ فدية 30 يومًا 9,000 روبية على القمح"
+   },
+   "date": "2026-02-09",
+   "year": "1447",
+   "url": "https://www.app.com.pk/?p=1159356",
+   "via": {
+    "en": "Associated Press of Pakistan",
+    "ar": "وكالة أنباء باكستان"
+   }
+  },
+  {
+   "id": "indonesia",
+   "country": {
+    "en": "Indonesia",
+    "ar": "إندونيسيا"
+   },
+   "body": {
+    "en": "BAZNAS, national zakat agency",
+    "ar": "الهيئة الوطنية للزكاة BAZNAS"
+   },
+   "cur": "IDR",
+   "fitr": 50000,
+   "fidya": 65000,
+   "basis": {
+    "en": "2.5 kg or 3.5 litres of rice a person (decision 14 of 2026)",
+    "ar": "2.5 كغ أو 3.5 لتر من الأرز عن الفرد (القرار 14 لسنة 2026)"
+   },
+   "date": "2026-02-03",
+   "year": "1447",
+   "url": "https://baznas.go.id/zakatfitrah"
+  },
+  {
+   "id": "singapore",
+   "country": {
+    "en": "Singapore",
+    "ar": "سنغافورة"
+   },
+   "body": {
+    "en": "MUIS, Islamic Religious Council of Singapore",
+    "ar": "المجلس الإسلامي في سنغافورة MUIS"
+   },
+   "cur": "SGD",
+   "fitr": 5,
+   "fidya": 4,
+   "kaffarah": 4,
+   "basis": {
+    "en": "Normal rate; higher rate S$8, both from the median price of rice. Fidya and kaffarah from the cost of a meal",
+    "ar": "السعر العادي؛ والسعر الأعلى 8 دولارات، وكلاهما من وسيط سعر الأرز. الفدية والكفارة من كلفة وجبة"
+   },
+   "date": "2026-02-16",
+   "year": "1447",
+   "url": "https://www.muis.gov.sg/resources/media-releases/muis-removes-compounded-fidyah-requirement-and-announces-zakat-fitrah-rates-for-ramadan-2026-1447h/",
+   "kaffarahFastOnly": true
+  },
+  {
+   "id": "malaysia-wp",
+   "country": {
+    "en": "Malaysia, Federal Territories",
+    "ar": "ماليزيا، الأقاليم الاتحادية"
+   },
+   "body": {
+    "en": "Federal Territories Shariah Advisory Committee",
+    "ar": "اللجنة الاستشارية الشرعية للأقاليم الاتحادية"
+   },
+   "cur": "MYR",
+   "fitr": 8,
+   "basis": {
+    "en": "Lowest of three rates by rice eaten: RM8, RM15, RM25",
+    "ar": "أدنى ثلاث فئات بحسب الأرز المستهلك: 8 و15 و25 رينغيت"
+   },
+   "date": "2026-02-12",
+   "year": "1447",
+   "url": "https://baitulmal.jawhar.gov.my/statistik-kadar-nisab-zakat-fitrah/",
+   "via": {
+    "en": "JAWHAR table of state rates",
+    "ar": "جدول جوهر لفئات الولايات"
+   }
+  },
+  {
+   "id": "malaysia-selangor",
+   "country": {
+    "en": "Malaysia, Selangor",
+    "ar": "ماليزيا، سلانغور"
+   },
+   "body": {
+    "en": "Lembaga Zakat Selangor",
+    "ar": "مجلس زكاة سلانغور"
+   },
+   "cur": "MYR",
+   "fitr": 8,
+   "basis": {
+    "en": "One Baghdad gantang, 2.6 kg of rice. RM8, RM16 or RM25 by rice eaten",
+    "ar": "جانتانغ بغدادي واحد، 2.6 كغ من الأرز. 8 أو 16 أو 25 رينغيت بحسب الأرز"
+   },
+   "date": "2026-02-13",
+   "year": "1447",
+   "url": "https://www.bernama.com/en/news.php?id=2523844",
+   "via": {
+    "en": "Bernama",
+    "ar": "وكالة برناما"
+   }
+  },
+  {
+   "id": "malaysia-johor",
+   "country": {
+    "en": "Malaysia, Johor",
+    "ar": "ماليزيا، جوهور"
+   },
+   "body": {
+    "en": "Johor State Fatwa Committee",
+    "ar": "لجنة الفتوى في ولاية جوهور"
+   },
+   "cur": "MYR",
+   "fitr": 8,
+   "basis": {
+    "en": "2.6 kg of rice. RM8, RM10 or RM20 by rice eaten",
+    "ar": "2.6 كغ من الأرز. 8 أو 10 أو 20 رينغيت بحسب الأرز"
+   },
+   "date": "2026-02-05",
+   "year": "1447",
+   "url": "https://bernama.com/en/news.php?id=2520361",
+   "via": {
+    "en": "Bernama",
+    "ar": "وكالة برناما"
+   }
+  },
+  {
+   "id": "malaysia-penang",
+   "country": {
+    "en": "Malaysia, Penang",
+    "ar": "ماليزيا، بينانغ"
+   },
+   "body": {
+    "en": "Penang Islamic Religious Council",
+    "ar": "المجلس الإسلامي في بينانغ"
+   },
+   "cur": "MYR",
+   "fitr": 10,
+   "basis": {
+    "en": "RM10, RM15 or RM25 by rice eaten",
+    "ar": "10 أو 15 أو 25 رينغيت بحسب الأرز"
+   },
+   "date": "2026-02-03",
+   "year": "1447",
+   "url": "https://bernama.com/en/news.php?id=2519617",
+   "via": {
+    "en": "Bernama",
+    "ar": "وكالة برناما"
+   }
+  },
+  {
+   "id": "malaysia-perak",
+   "country": {
+    "en": "Malaysia, Perak",
+    "ar": "ماليزيا، بيراك"
+   },
+   "body": {
+    "en": "Perak Islamic Religious Council",
+    "ar": "المجلس الإسلامي في بيراك"
+   },
+   "cur": "MYR",
+   "fitr": 10,
+   "basis": {
+    "en": "RM10, RM16 or RM25 by rice eaten",
+    "ar": "10 أو 16 أو 25 رينغيت بحسب الأرز"
+   },
+   "date": "2026-02-03",
+   "year": "1447",
+   "url": "https://bernama.com/en/news.php?id=2519551",
+   "via": {
+    "en": "Bernama",
+    "ar": "وكالة برناما"
+   }
+  },
+  {
+   "id": "malaysia-kelantan",
+   "country": {
+    "en": "Malaysia, Kelantan",
+    "ar": "ماليزيا، كلنتن"
+   },
+   "body": {
+    "en": "Kelantan Islamic Religious Council",
+    "ar": "المجلس الإسلامي في كلنتن"
+   },
+   "cur": "MYR",
+   "fitr": 10,
+   "basis": {
+    "en": "RM10; RM22 encouraged for those eating dearer rice",
+    "ar": "10 رينغيت؛ ويُستحب 22 لمن يأكل أرزًا أغلى"
+   },
+   "date": "2026-02-16",
+   "year": "1447",
+   "url": "https://www.bernama.com/en/news.php?id=2524847",
+   "via": {
+    "en": "Bernama",
+    "ar": "وكالة برناما"
+   }
+  },
+  {
+   "id": "malaysia-sarawak",
+   "country": {
+    "en": "Malaysia, Sarawak",
+    "ar": "ماليزيا، ساراواك"
+   },
+   "body": {
+    "en": "Majlis Islam Sarawak (Swk. L.N. 24 of 2026)",
+    "ar": "المجلس الإسلامي في ساراواك (اللائحة 24 لسنة 2026)"
+   },
+   "cur": "MYR",
+   "fitr": 7.5,
+   "basis": {
+    "en": "One rate for the whole state, set by gazette",
+    "ar": "مبلغ واحد للولاية كلها بالجريدة الرسمية"
+   },
+   "date": "2026-02-19",
+   "year": "1447",
+   "url": "https://lawnet.sarawak.gov.my/lawnet_file/Subsidiary/SUB_Issue%20No.%205_L.N.%2024%20Zakat%20Fitrah.pdf"
+  },
+  {
+   "id": "qatar",
+   "country": {
+    "en": "Qatar",
+    "ar": "قطر"
+   },
+   "body": {
+    "en": "Ministry of Awqaf, Zakat Fund Department",
+    "ar": "وزارة الأوقاف، إدارة صندوق الزكاة"
+   },
+   "cur": "QAR",
+   "fitr": 15,
+   "date": "2026-03-04",
+   "year": "1447",
+   "url": "https://thepeninsulaqatar.com/article/04/03/2026/awqaf-ministry-sets-zakat-al-fitr-at-qr15-per-person",
+   "via": {
+    "en": "The Peninsula",
+    "ar": "صحيفة البينسولا"
+   }
+  },
+  {
+   "id": "jordan",
+   "country": {
+    "en": "Jordan",
+    "ar": "الأردن"
+   },
+   "body": {
+    "en": "Iftaa Council, decision 331",
+    "ar": "مجلس الإفتاء، القرار 331"
+   },
+   "cur": "JOD",
+   "fitr": 1.8,
+   "fidya": 1,
+   "basis": {
+    "en": "2.5 kg of wheat a person; fidya at least 1 dinar a day",
+    "ar": "2.5 كغ من القمح عن الفرد؛ الفدية دينار واحد في حده الأدنى عن اليوم"
+   },
+   "date": "2026-02-23",
+   "year": "1447",
+   "url": "https://www.aliftaa.jo/decision/1747/%D9%82%D8%B1%D8%A7%D8%B1-%D8%B1%D9%82%D9%85-331-%D9%82%D9%8A%D9%85%D8%A9-%D8%B2%D9%83%D8%A7%D8%A9-%D8%A7%D9%84%D9%81%D8%B7%D8%B1-%D9%84%D8%B9%D8%A7%D9%85-1447%D9%87%D9%80"
+  },
+  {
+   "id": "egypt",
+   "country": {
+    "en": "Egypt",
+    "ar": "مصر"
+   },
+   "body": {
+    "en": "Dar al-Ifta al-Misriyyah",
+    "ar": "دار الإفتاء المصرية"
+   },
+   "cur": "EGP",
+   "fitr": 35,
+   "basis": {
+    "en": "Minimum; 2.04 kg of wheat a person",
+    "ar": "حد أدنى؛ 2.04 كغ من القمح عن الفرد"
+   },
+   "date": "2026-02-18",
+   "year": "1447",
+   "url": "https://www.dar-alifta.org/ar/Articles/Details/11042/%D8%AF%D8%A7%D8%B1-%D8%A7%D9%84%D8%A5%D9%81%D8%AA%D8%A7%D8%A1-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%AA%D8%AD%D8%AF%D8%AF-%D9%82%D9%8A%D9%85%D8%A9%D9%8E-%D8%B2%D9%83%D8%A7%D8%A9-%D8%A7%D9%84%D9%81%D8%B7%D8%B1-%D9%84%D9%87%D8%B0%D8%A7-%D8%A7%D9%84%D8%B9%D8%A7%D9%85-1447%D9%87%D9%80-2026%D9%85"
+  },
+  {
+   "id": "morocco",
+   "country": {
+    "en": "Morocco",
+    "ar": "المغرب"
+   },
+   "body": {
+    "en": "Higher Council of Ulema",
+    "ar": "المجلس العلمي الأعلى"
+   },
+   "cur": "MAD",
+   "fitr": 25,
+   "basis": {
+    "en": "Minimum; one sa’, about 2.5 kg of grain or flour",
+    "ar": "حد أدنى؛ صاع نبوي، نحو 2.5 كغ من الحبوب أو الدقيق"
+   },
+   "date": "2026-03-13",
+   "year": "1447",
+   "url": "https://www.maroc.ma/ar/%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%AA%D8%AD%D8%AF%D9%8A%D8%AF-%D9%85%D9%82%D8%AF%D8%A7%D8%B1-%D8%B2%D9%83%D8%A7%D8%A9-%D8%A7%D9%84%D9%81%D8%B7%D8%B1-%D9%86%D9%82%D8%AF%D8%A7-%D9%84%D8%B9%D8%A7%D9%85-1447%D9%87%D9%802026%D9%85-%D9%81%D9%8A-%D9%85%D8%A8%D9%84%D8%BA-25-%D8%AF%D8%B1%D9%87%D9%85%D8%A7",
+   "via": {
+    "en": "maroc.ma, portal of the Kingdom",
+    "ar": "البوابة الرسمية للمملكة"
+   }
+  },
+  {
+   "id": "algeria",
+   "country": {
+    "en": "Algeria",
+    "ar": "الجزائر"
+   },
+   "body": {
+    "en": "Ministry of Religious Affairs",
+    "ar": "وزارة الشؤون الدينية والأوقاف"
+   },
+   "cur": "DZD",
+   "fitr": 170,
+   "date": "2026-03-04",
+   "year": "1447",
+   "url": "https://www.aps.dz/algerie/societe/mmbz6ajv-%D8%AA%D8%AD%D8%AF%D9%8A%D8%AF-%D8%B2%D9%83%D8%A7%D8%A9-%D8%A7%D9%84%D9%81%D8%B7%D8%B1-%D9%84%D9%87%D8%B0%D8%A7-%D8%A7%D9%84%D8%B9%D8%A7%D9%85-%D8%A8170-%D8%AF%D8%AC",
+   "via": {
+    "en": "APS",
+    "ar": "وكالة الأنباء الجزائرية"
+   }
+  },
+  {
+   "id": "tunisia",
+   "country": {
+    "en": "Tunisia",
+    "ar": "تونس"
+   },
+   "body": {
+    "en": "Mufti of the Republic",
+    "ar": "مفتي الجمهورية"
+   },
+   "cur": "TND",
+   "fitr": 2,
+   "date": "2026-03-12",
+   "year": "1447",
+   "url": "https://www.lapresse.tn/?p=4320100",
+   "via": {
+    "en": "La Presse de Tunisie",
+    "ar": "صحيفة لابريس"
+   }
+  },
+  {
+   "id": "usa",
+   "country": {
+    "en": "United States",
+    "ar": "الولايات المتحدة"
+   },
+   "body": {
+    "en": "Fiqh Council of North America",
+    "ar": "المجلس الفقهي لأمريكا الشمالية"
+   },
+   "cur": "USD",
+   "fitr": 10,
+   "fidya": 15,
+   "basis": {
+    "en": "About $6 of staple food, rounded up to $10 by caution; fidya $13.78 of daily food, rounded to $15",
+    "ar": "نحو 6 دولارات من القوت، رُفعت إلى 10 احتياطًا؛ الفدية 13.78 دولارًا لطعام يوم، رُفعت إلى 15"
+   },
+   "date": "2026-02-07",
+   "year": "1447",
+   "url": "https://fiqhcouncil.org/fidyah-and-zakat-al-fitr/"
+  }
+ ]
+}

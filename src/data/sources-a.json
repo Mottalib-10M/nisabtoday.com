@@ -1,0 +1,93 @@
+{
+  "a-quran-9-103": {
+    "url": "https://quran.com/9/103",
+    "label": {
+      "en": "Qur’an 9:103, a charity that purifies",
+      "ar": "سورة التوبة 103: صدقة تطهرهم وتزكيهم بها"
+    }
+  },
+  "a-quran-2-43": {
+    "url": "https://quran.com/2/43",
+    "label": {
+      "en": "Qur’an 2:43, establish prayer and give zakah",
+      "ar": "سورة البقرة 43: وأقيموا الصلاة وآتوا الزكاة"
+    }
+  },
+  "a-bukhari-8": {
+    "url": "https://sunnah.com/bukhari:8",
+    "label": {
+      "en": "Sahih al-Bukhari 8, Islam is built on five",
+      "ar": "صحيح البخاري 8: بني الإسلام على خمس"
+    }
+  },
+  "a-bukhari-1395": {
+    "url": "https://sunnah.com/bukhari:1395",
+    "label": {
+      "en": "Sahih al-Bukhari 1395, taken from the rich and given to the poor",
+      "ar": "صحيح البخاري 1395: تؤخذ من أغنيائهم فترد على فقرائهم"
+    }
+  },
+  "a-bukhari-1454": {
+    "url": "https://sunnah.com/bukhari:1454",
+    "label": {
+      "en": "Sahih al-Bukhari 1454, one fortieth on silver (letter of Abu Bakr)",
+      "ar": "صحيح البخاري 1454: وفي الرقة ربع العشر"
+    }
+  },
+  "a-abudawud-1573": {
+    "url": "https://sunnah.com/abudawud:1573",
+    "label": {
+      "en": "Sunan Abi Dawud 1573, no zakat until a year has passed",
+      "ar": "سنن أبي داود 1573: ليس في مال زكاة حتى يحول عليه الحول"
+    }
+  },
+  "a-egypt-maintenance": {
+    "url": "https://www.dar-alifta.org/ar/fatwa/details/18483",
+    "label": {
+      "en": "Dar al-Ifta al-Misriyyah, fatwa 18483: zakat to someone you must maintain",
+      "ar": "دار الإفتاء المصرية، الفتوى 18483: إعطاء الزكاة لمن تلزمه نفقته"
+    }
+  },
+  "a-egypt-bitcoin": {
+    "url": "https://www.dar-alifta.org/ar/fatwa/details/14139",
+    "label": {
+      "en": "Dar al-Ifta al-Misriyyah, fatwa 14139: trading bitcoin (28 December 2017)",
+      "ar": "دار الإفتاء المصرية، الفتوى 14139: تداول البيتكوين (28 ديسمبر 2017)"
+    }
+  },
+  "a-irs-early": {
+    "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-exceptions-to-tax-on-early-distributions",
+    "label": {
+      "en": "IRS, additional 10 % tax on early distributions before age 59½",
+      "ar": "مصلحة الضرائب الأمريكية: ضريبة إضافية 10 % على السحب قبل سن 59.5"
+    }
+  },
+  "a-govuk-pension-age": {
+    "url": "https://www.gov.uk/early-retirement-pension/personal-and-workplace-pensions",
+    "label": {
+      "en": "GOV.UK, taking a personal or workplace pension, usually after 55",
+      "ar": "الحكومة البريطانية: سحب المعاش الشخصي أو معاش العمل بعد 55 عادة"
+    }
+  },
+  "a-govuk-pension-taxfree": {
+    "url": "https://www.gov.uk/tax-on-pension/tax-free",
+    "label": {
+      "en": "GOV.UK, up to 25 % of a pension as a tax-free lump sum",
+      "ar": "الحكومة البريطانية: حتى 25 % من المعاش مبلغًا معفى من الضريبة"
+    }
+  },
+  "a-quran-6-141": {
+    "url": "https://quran.com/6/141",
+    "label": {
+      "en": "Qur’an 6:141, give its due on the day of its harvest",
+      "ar": "سورة الأنعام 141: وآتوا حقه يوم حصاده"
+    }
+  },
+  "a-egypt-past-years": {
+    "url": "https://www.dar-alifta.org/ar/fatwa/details/16544",
+    "label": {
+      "en": "Dar al-Ifta al-Misriyyah, fatwa 16544: zakat owed for past years",
+      "ar": "دار الإفتاء المصرية، الفتوى 16544: إخراج الزكاة عما مضى من السنوات"
+    }
+  }
+}

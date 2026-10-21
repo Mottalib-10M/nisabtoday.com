@@ -1,0 +1,498 @@
+{
+ "_lisezmoi": "Paramètres du calcul. Chaque valeur relue sur la source citée le 2026-10-21 (notes : research/). Jamais de chiffre en dur dans le code.",
+ "year": 2026,
+ "retrieved_at": "2026-10-21",
+ "valid_from": "2026-01-01",
+ "valid_to": "2026-12-31",
+ "nisab": {
+  "conventions": {
+   "g85": {
+    "gold": 85,
+    "silver": 595
+   },
+   "pk": {
+    "gold": 87.48,
+    "silver": 612.32
+   }
+  },
+  "_g85": "20 dinars x 4.25 g = 85 g of gold (jordan-nisab, egypt-nisab, ppz-nisab, kuwait-calc) ; 200 dirhams = 595 g of silver (ppz-silver)",
+  "_pk": "Zakat and Ushr Ordinance 1980 s.2 : 612.32 g of silver, 87.48 g of gold (pk-ordinance)",
+  "pk1447": {
+   "pkr": 503529,
+   "date": "2026-02-17"
+  },
+  "urf": {
+   "ppz": 800,
+   "muis": 860
+  }
+ },
+ "rate": {
+  "lunar": 0.025,
+  "solar": 0.02577683615819209,
+  "lunarDays": 354,
+  "solarDays": 365,
+  "_solar": "ZATCA : 2.5 % / 354 x days of the fiscal year (zatca-reg art. 15, zatca-faq)"
+ },
+ "faraid": {
+  "bequestMax": 0.3333333333333333
+ },
+ "fitr": {
+  "saKg": {
+   "majority": 2.04,
+   "jordan": 2.5,
+   "hanafiHalfSaKg": 1.625,
+   "hanafiSaKg": 3.25,
+   "caution": 3
+  }
+ },
+ "sources": {
+  "quran-9-60": {
+   "url": "https://quran.com/9/60",
+   "label": {
+    "en": "Qur’an 9:60, the eight recipients of zakat",
+    "ar": "القرآن الكريم، التوبة 60: مصارف الزكاة الثمانية"
+   }
+  },
+  "quran-2-184": {
+   "url": "https://quran.com/2/184",
+   "label": {
+    "en": "Qur’an 2:184, fidya",
+    "ar": "القرآن الكريم، البقرة 184: الفدية"
+   }
+  },
+  "quran-5-89": {
+   "url": "https://quran.com/5/89",
+   "label": {
+    "en": "Qur’an 5:89, kaffarah of an oath",
+    "ar": "القرآن الكريم، المائدة 89: كفارة اليمين"
+   }
+  },
+  "quran-4-11": {
+   "url": "https://quran.com/4/11",
+   "label": {
+    "en": "Qur’an 4:11, shares of children and parents",
+    "ar": "القرآن الكريم، النساء 11: نصيب الأولاد والأبوين"
+   }
+  },
+  "quran-4-12": {
+   "url": "https://quran.com/4/12",
+   "label": {
+    "en": "Qur’an 4:12, shares of spouses and uterine siblings",
+    "ar": "القرآن الكريم، النساء 12: نصيب الزوجين والإخوة لأم"
+   }
+  },
+  "quran-4-176": {
+   "url": "https://quran.com/4/176",
+   "label": {
+    "en": "Qur’an 4:176, shares of sisters and brothers",
+    "ar": "القرآن الكريم، النساء 176: نصيب الأخوات والإخوة"
+   }
+  },
+  "bukhari-1503": {
+   "url": "https://sunnah.com/bukhari:1503",
+   "label": {
+    "en": "Sahih al-Bukhari 1503, zakat al-fitr of one sa’",
+    "ar": "صحيح البخاري 1503: زكاة الفطر صاع"
+   }
+  },
+  "bukhari-1936": {
+   "url": "https://sunnah.com/bukhari:1936",
+   "label": {
+    "en": "Sahih al-Bukhari 1936, kaffarah for a broken fast",
+    "ar": "صحيح البخاري 1936: كفارة الجماع في رمضان"
+   }
+  },
+  "bukhari-1447": {
+   "url": "https://sunnah.com/bukhari:1447",
+   "label": {
+    "en": "Sahih al-Bukhari 1447, no zakat below five awaq",
+    "ar": "صحيح البخاري 1447: ليس فيما دون خمس أواق صدقة"
+   }
+  },
+  "bukhari-1483": {
+   "url": "https://sunnah.com/bukhari:1483",
+   "label": {
+    "en": "Sahih al-Bukhari 1483, a tenth or a twentieth of crops",
+    "ar": "صحيح البخاري 1483: العشر ونصف العشر"
+   }
+  },
+  "bukhari-6736": {
+   "url": "https://sunnah.com/bukhari:6736",
+   "label": {
+    "en": "Sahih al-Bukhari 6736, daughter, son’s daughter and sister",
+    "ar": "صحيح البخاري 6736: البنت وبنت الابن والأخت"
+   }
+  },
+  "jordan-nisab": {
+   "url": "https://www.aliftaa.jo/en-fatwas/854",
+   "label": {
+    "en": "Jordan General Iftaa Department, fatwa 854: nisab of gold, 85 g",
+    "ar": "دائرة الإفتاء العام الأردنية، الفتوى 854: نصاب الذهب 85 غرامًا"
+   }
+  },
+  "jordan-fitr-cash": {
+   "url": "https://www.aliftaa.jo/fatwa/4209/CatQuestion.aspx?Id=152",
+   "label": {
+    "en": "Jordan General Iftaa Department, fatwa 4209: zakat al-fitr in cash",
+    "ar": "دائرة الإفتاء العام الأردنية، الفتوى 4209: إخراج زكاة الفطر نقدًا"
+   }
+  },
+  "egypt-nisab": {
+   "url": "https://www.dar-alifta.org/ar/fatwa/details/21692",
+   "label": {
+    "en": "Dar al-Ifta al-Misriyyah, fatwa 21692: nisab and gold carat",
+    "ar": "دار الإفتاء المصرية، الفتوى 21692: النصاب وعيار الذهب"
+   }
+  },
+  "egypt-jewel": {
+   "url": "https://www.dar-alifta.org/ar/fatwa/details/22484",
+   "label": {
+    "en": "Dar al-Ifta al-Misriyyah, fatwa 22484: zakat on worn jewellery",
+    "ar": "دار الإفتاء المصرية، الفتوى 22484: زكاة الحلي"
+   }
+  },
+  "egypt-fitr-cash": {
+   "url": "https://www.dar-alifta.org/ar/fatwa/details/20491",
+   "label": {
+    "en": "Dar al-Ifta al-Misriyyah, fatwa 20491: zakat al-fitr in cash",
+    "ar": "دار الإفتاء المصرية، الفتوى 20491: زكاة الفطر نقدًا"
+   }
+  },
+  "egypt-fitr-hanafi": {
+   "url": "https://www.dar-alifta.org/ar/fatwa/details/11208",
+   "label": {
+    "en": "Dar al-Ifta al-Misriyyah, fatwa 11208: the Hanafi measure of zakat al-fitr",
+    "ar": "دار الإفتاء المصرية، الفتوى 11208: مقدار زكاة الفطر عند الحنفية"
+   }
+  },
+  "egypt-shares": {
+   "url": "https://www.dar-alifta.org/ar/fatwa/details/12218",
+   "label": {
+    "en": "Dar al-Ifta al-Misriyyah, fatwa 12218: zakat on shares kept as savings",
+    "ar": "دار الإفتاء المصرية، الفتوى 12218: زكاة الأسهم المدخرة"
+   }
+  },
+  "egypt-kaffarah": {
+   "url": "https://www.dar-alifta.org/ar/fatwa/details/16806",
+   "label": {
+    "en": "Dar al-Ifta al-Misriyyah, fatwa 16806: breaking a fast on purpose",
+    "ar": "دار الإفتاء المصرية، الفتوى 16806: الفطر عمدًا في رمضان"
+   }
+  },
+  "pk-ordinance": {
+   "url": "https://zakat.punjab.gov.pk/system/files/zakatushr1980.pdf",
+   "label": {
+    "en": "Zakat and Ushr Ordinance 1980, section 2, nisab (Government of the Punjab copy)",
+    "ar": "مرسوم الزكاة والعشر الباكستاني لسنة 1980، المادة 2: النصاب"
+   }
+  },
+  "pk-faq": {
+   "url": "https://zakat.punjab.gov.pk/faq",
+   "label": {
+    "en": "Punjab Zakat and Ushr Department, questions and answers",
+    "ar": "إدارة الزكاة والعشر في البنجاب، أسئلة وأجوبة"
+   }
+  },
+  "pk-calc": {
+   "url": "https://zakat.punjab.gov.pk/zakat-calculator",
+   "label": {
+    "en": "Punjab Zakat and Ushr Department, zakat calculator",
+    "ar": "إدارة الزكاة والعشر في البنجاب، حاسبة الزكاة"
+   }
+  },
+  "pk-nisab-1447": {
+   "url": "https://www.app.com.pk/?p=1164425",
+   "label": {
+    "en": "Administrator General Zakat, nisab for 1 Ramadan 1447 (APP, 17 Feb 2026)",
+    "ar": "المدير العام للزكاة في باكستان، نصاب 1 رمضان 1447 (وكالة أنباء باكستان)"
+   }
+  },
+  "ppz-nisab": {
+   "url": "https://www.zakat.com.my/info-zakat/arkib-nisab-tahunan/",
+   "label": {
+    "en": "PPZ-MAIWP (Federal Territories, Malaysia), yearly nisab archive",
+    "ar": "مركز جباية الزكاة في الأقاليم الاتحادية بماليزيا، أرشيف النصاب السنوي"
+   }
+  },
+  "ppz-gold": {
+   "url": "https://www.zakat.com.my/info-zakat/jenis-jenis-zakat/zakat-emas/",
+   "label": {
+    "en": "PPZ-MAIWP, zakat on gold and the ‘urf of worn jewellery",
+    "ar": "مركز جباية الزكاة بماليزيا، زكاة الذهب وعرف الحلي"
+   }
+  },
+  "ppz-silver": {
+   "url": "https://www.zakat.com.my/info-zakat/jenis-jenis-zakat/zakat-perak/",
+   "label": {
+    "en": "PPZ-MAIWP, zakat on silver, 595 g",
+    "ar": "مركز جباية الزكاة بماليزيا، زكاة الفضة 595 غرامًا"
+   }
+  },
+  "ppz-savings": {
+   "url": "https://www.zakat.com.my/info-zakat/jenis-jenis-zakat/zakat-wang-simpanan/",
+   "label": {
+    "en": "PPZ-MAIWP, zakat on savings",
+    "ar": "مركز جباية الزكاة بماليزيا، زكاة المدخرات"
+   }
+  },
+  "ppz-epf": {
+   "url": "https://www.zakat.com.my/info-zakat/jenis-jenis-zakat/zakat-kwsp/",
+   "label": {
+    "en": "PPZ-MAIWP, zakat on EPF retirement savings",
+    "ar": "مركز جباية الزكاة بماليزيا، زكاة صندوق التقاعد"
+   }
+  },
+  "ppz-shares": {
+   "url": "https://www.zakat.com.my/info-zakat/jenis-jenis-zakat/zakat-saham/",
+   "label": {
+    "en": "PPZ-MAIWP, zakat on shares",
+    "ar": "مركز جباية الزكاة بماليزيا، زكاة الأسهم"
+   }
+  },
+  "ppz-digital": {
+   "url": "https://www.zakat.com.my/info-zakat/jenis-jenis-zakat/zakat-aset-digital/",
+   "label": {
+    "en": "PPZ-MAIWP, zakat on digital assets (fatwa gazetted 14 Nov 2022)",
+    "ar": "مركز جباية الزكاة بماليزيا، زكاة الأصول الرقمية"
+   }
+  },
+  "ppz-business": {
+   "url": "https://www.zakat.com.my/info-zakat/jenis-jenis-zakat/zakat-perniagaan/",
+   "label": {
+    "en": "PPZ-MAIWP, zakat on business",
+    "ar": "مركز جباية الزكاة بماليزيا، زكاة التجارة"
+   }
+  },
+  "ppz-fidyah": {
+   "url": "https://www.zakat.com.my/info-zakat/fidyah/",
+   "label": {
+    "en": "PPZ-MAIWP, fidyah",
+    "ar": "مركز جباية الزكاة بماليزيا، الفدية"
+   }
+  },
+  "ppz-asnaf": {
+   "url": "https://www.zakat.com.my/info-zakat/asnaf-zakat/",
+   "label": {
+    "en": "PPZ-MAIWP, the eight asnaf",
+    "ar": "مركز جباية الزكاة بماليزيا، الأصناف الثمانية"
+   }
+  },
+  "kuwait-calc": {
+   "url": "https://www.zakathouse.org.kw/calculate.aspx",
+   "label": {
+    "en": "Kuwait Zakat House, zakat calculator (nisab of 85 g of 24 carat gold)",
+    "ar": "بيت الزكاة الكويتي، حاسبة الزكاة (نصاب 85 غرام ذهب عيار 24)"
+   }
+  },
+  "iifa-shares": {
+   "url": "https://iifa-aifi.org/en/32294.html",
+   "label": {
+    "en": "International Islamic Fiqh Academy, resolution 28 (3/4): zakat on company shares",
+    "ar": "مجمع الفقه الإسلامي الدولي، القرار 28 (3/4): زكاة أسهم الشركات"
+   }
+  },
+  "iifa-shares-income": {
+   "url": "https://iifa-aifi.org/en/32840.html",
+   "label": {
+    "en": "International Islamic Fiqh Academy, resolution 121 (3/13): shares held for income",
+    "ar": "مجمع الفقه الإسلامي الدولي، القرار 121 (3/13): زكاة الأسهم المقتناة للاستغلال"
+   }
+  },
+  "iifa-property": {
+   "url": "https://iifa-aifi.org/en/32196.html",
+   "label": {
+    "en": "International Islamic Fiqh Academy, resolution 2 (2/2): real estate and rented land",
+    "ar": "مجمع الفقه الإسلامي الدولي، القرار 2 (2/2): زكاة العقارات والأراضي المأجورة"
+   }
+  },
+  "iifa-debts": {
+   "url": "https://iifa-aifi.org/en/32192.html",
+   "label": {
+    "en": "International Islamic Fiqh Academy, resolution 1 (1/2): zakat on debts",
+    "ar": "مجمع الفقه الإسلامي الدولي، القرار 1 (1/2): زكاة الديون"
+   }
+  },
+  "iifa-pension": {
+   "url": "https://iifa-aifi.org/en/32897.html",
+   "label": {
+    "en": "International Islamic Fiqh Academy, resolution 143 (1/16): end-of-service and savings funds",
+    "ar": "مجمع الفقه الإسلامي الدولي، القرار 143 (1/16): مكافأة نهاية الخدمة وصناديق الادخار"
+   }
+  },
+  "zatca-reg": {
+   "url": "https://zatca.gov.sa/en/RulesRegulations/Documents/ZAKAT%20COLLECTION.pdf",
+   "label": {
+    "en": "ZATCA, Implementing Regulations for Zakat Collection 1445H, article 15",
+    "ar": "هيئة الزكاة والضريبة والجمارك، اللائحة التنفيذية لجباية الزكاة 1445هـ، المادة 15"
+   }
+  },
+  "zatca-faq": {
+   "url": "https://zatca.gov.sa/en/HelpCenter/guidelines/Documents/FAQ%27s.pdf",
+   "label": {
+    "en": "ZATCA, frequently asked questions on zakat",
+    "ar": "هيئة الزكاة والضريبة والجمارك، الأسئلة الشائعة عن الزكاة"
+   }
+  },
+  "islamweb-debts": {
+   "url": "https://www.islamweb.net/ar/fatwa/47139/",
+   "label": {
+    "en": "Islamweb fatwa 47139: debts and zakat",
+    "ar": "إسلام ويب، الفتوى 47139: الدين والزكاة"
+   }
+  },
+  "islamweb-debts2": {
+   "url": "https://www.islamweb.net/ar/fatwa/64373/",
+   "label": {
+    "en": "Islamweb fatwa 64373: debts and the schools",
+    "ar": "إسلام ويب، الفتوى 64373: الدين عند المذاهب"
+   }
+  },
+  "islamweb-fidya": {
+   "url": "https://www.islamweb.net/ar/fatwa/28409/",
+   "label": {
+    "en": "Islamweb fatwa 28409: how much fidya",
+    "ar": "إسلام ويب، الفتوى 28409: مقدار الفدية"
+   }
+  },
+  "islamweb-fitr-cash": {
+   "url": "https://www.islamweb.net/ar/fatwa/71159/",
+   "label": {
+    "en": "Islamweb fatwa 71159: zakat al-fitr in cash",
+    "ar": "إسلام ويب، الفتوى 71159: إخراج زكاة الفطر نقودًا"
+   }
+  },
+  "islamweb-kaffarah": {
+   "url": "https://www.islamweb.net/ar/fatwa/93029/",
+   "label": {
+    "en": "Islamweb fatwa 93029: kaffarah for a broken fast",
+    "ar": "إسلام ويب، الفتوى 93029: كفارة الفطر في رمضان"
+   }
+  },
+  "islamweb-minbariyya": {
+   "url": "https://www.islamweb.net/ar/fatwa/359851/",
+   "label": {
+    "en": "Islamweb fatwa 359851: the minbariyya case",
+    "ar": "إسلام ويب، الفتوى 359851: المسألة المنبرية"
+   }
+  },
+  "islamweb-umariyya": {
+   "url": "https://www.islamweb.net/ar/fatwa/15603/",
+   "label": {
+    "en": "Islamweb fatwa 15603: the two umariyya cases",
+    "ar": "إسلام ويب، الفتوى 15603: العمريتان"
+   }
+  },
+  "islamweb-umariyya2": {
+   "url": "https://www.islamweb.net/ar/fatwa/171453/",
+   "label": {
+    "en": "Islamweb fatwa 171453: wife, mother and father",
+    "ar": "إسلام ويب، الفتوى 171453: زوجة وأم وأب"
+   }
+  },
+  "islamweb-mushtaraka": {
+   "url": "https://www.islamweb.net/ar/fatwa/204760/",
+   "label": {
+    "en": "Islamweb fatwa 204760: akdariyya and mushtaraka",
+    "ar": "إسلام ويب، الفتوى 204760: الأكدرية والمشتركة"
+   }
+  },
+  "islamweb-takmila": {
+   "url": "https://www.islamweb.net/ar/fatwa/172621/",
+   "label": {
+    "en": "Islamweb fatwa 172621: daughter, son’s daughter and sister",
+    "ar": "إسلام ويب، الفتوى 172621: البنت وبنت الابن والشقيقة"
+   }
+  },
+  "islamweb-radd": {
+   "url": "https://www.islamweb.net/ar/fatwa/319204/",
+   "label": {
+    "en": "Islamweb fatwa 319204: radd to mother and daughter",
+    "ar": "إسلام ويب، الفتوى 319204: الرد على الأم والبنت"
+   }
+  },
+  "islamweb-radd-wife": {
+   "url": "https://www.islamweb.net/ar/fatwa/127741/",
+   "label": {
+    "en": "Islamweb fatwa 127741: wife, mother and daughter",
+    "ar": "إسلام ويب، الفتوى 127741: زوجة وأم وبنت"
+   }
+  },
+  "islamweb-radd-husband": {
+   "url": "https://www.islamweb.net/ar/fatwa/227083/",
+   "label": {
+    "en": "Islamweb fatwa 227083: husband, mother and daughter",
+    "ar": "إسلام ويب، الفتوى 227083: زوج وأم وبنت"
+   }
+  },
+  "islamweb-awl": {
+   "url": "https://www.islamweb.net/ar/fatwa/48741/",
+   "label": {
+    "en": "Islamweb fatwa 48741: husband and sisters, ‘awl",
+    "ar": "إسلام ويب، الفتوى 48741: زوج وأخوات، العول"
+   }
+  },
+  "islamweb-mother": {
+   "url": "https://www.islamweb.net/ar/fatwa/409885/",
+   "label": {
+    "en": "Islamweb fatwa 409885: the mother’s sixth with brothers",
+    "ar": "إسلام ويب، الفتوى 409885: سدس الأم مع الإخوة"
+   }
+  },
+  "islamweb-siblings": {
+   "url": "https://www.islamweb.net/ar/fatwa/140483/",
+   "label": {
+    "en": "Islamweb fatwa 140483: husband, mother and full siblings",
+    "ar": "إسلام ويب، الفتوى 140483: زوج وأم وإخوة أشقاء"
+   }
+  },
+  "ibn-taymiyya": {
+   "url": "https://www.islamweb.net/ar/library/content/22/5096/",
+   "label": {
+    "en": "Ibn Taymiyya, Majmu‘ al-Fatawa: grandfather and siblings, mushtaraka",
+    "ar": "ابن تيمية، مجموع الفتاوى: الجد والإخوة والمشتركة"
+   }
+  },
+  "muis-jewel": {
+   "url": "https://www.muis.gov.sg/resources/khutbah-and-religious-advice/fatwa/zakat-on-gold-jewellery--english/",
+   "label": {
+    "en": "MUIS fatwa on zakat on gold jewellery (Singapore)",
+    "ar": "فتوى المجلس الإسلامي في سنغافورة في زكاة الحلي"
+   }
+  },
+  "baznas-nisab": {
+   "url": "https://baznas.go.id/news-show/BAZNAS_RI_Tetapkan_Nisab_Zakat_Penghasilan_dan_Jasa_2026_Rp7.640.144_per_bulan/3777",
+   "label": {
+    "en": "BAZNAS decision 15 of 2026: nisab of income zakat",
+    "ar": "قرار الهيئة الوطنية للزكاة بإندونيسيا 15 لسنة 2026: نصاب زكاة الدخل"
+   }
+  },
+  "gold-api": {
+   "url": "https://gold-api.com/",
+   "label": {
+    "en": "gold-api.com, spot price of gold and silver (XAU, XAG)",
+    "ar": "gold-api.com، السعر الفوري للذهب والفضة"
+   }
+  },
+  "ecb": {
+   "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+   "label": {
+    "en": "European Central Bank, euro reference exchange rates",
+    "ar": "البنك المركزي الأوروبي، أسعار الصرف المرجعية لليورو"
+   }
+  },
+  "erapi": {
+   "url": "https://www.exchangerate-api.com",
+   "label": {
+    "en": "Rates By Exchange Rate API",
+    "ar": "Rates By Exchange Rate API"
+   }
+  },
+  "ummalqura": {
+   "url": "https://www.ummulqura.org.sa/",
+   "label": {
+    "en": "Umm al-Qura calendar (Saudi Arabia)",
+    "ar": "تقويم أم القرى"
+   }
+  }
+ }
+}

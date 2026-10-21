@@ -1,0 +1,31 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { route } from '../../i18n/routes';
+import { AUTHOR_NAME, AUTHOR_DESC, CONTACT_EMAIL } from '../../data/site-config';
+import { helpers } from '../../lib/helpers';
+import { profilePageSchema, breadcrumbSchema } from '../../lib/seo';
+const lang = 'en';
+const h = helpers(lang);
+const path = route('about', lang);
+const title = 'Zakat Calculator Publisher 2026: Who Runs This Site';
+const description = 'Zakat Calculator is published by Radif Partners, an independent company in France. Not a charity or religious authority: no donation, no account, sources cited.';
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[profilePageSchema({ path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path }])]} breadcrumbs={[{ label: 'About' }]}>
+  <article class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>About this site</h1>
+    <p>{AUTHOR_DESC.en}</p>
+    <h2>Why it exists</h2>
+    <p>The zakat calculators that rank first in search engines are almost all run by charities. They are useful, but each works in one currency, often sets the nisab once a year, and ends with a button to give through that charity. The question people bring is simpler: how much do I owe today, in my currency, on what I own, and what changes if I follow one school or another? This site answers that question and stops there.</p>
+    <p>It does better than the first Google result because nzf.org.uk calculates in pounds only and serves the collection of its charity, while this calculator gives the nisab of the day in {Object.keys(h.MARKET.fx).length} currencies from the price of gold and silver, shows both amounts where the schools of law differ (worn jewellery, locked pensions), gives each kind of wealth its own page with its own calculator, and asks for neither a donation nor your details.</p>
+    <h2>Who publishes it</h2>
+    <p>The site is published by {AUTHOR_NAME}, a company based in France that builds calculators on published rules. It is not a religious authority, a fatwa council, a zakat body or a charity. It collects no money, does not recommend where to pay and has no partner to send you to. No scholar signs the pages, because the site gives no fatwa: it applies rules that councils and official bodies have published, and names them.</p>
+    <LegalIdentity lang={lang} />
+    <h2>What it relies on</h2>
+    <p>The Qur’an and the hadith collections for the rules themselves; the resolutions of the International Islamic Fiqh Academy on shares, pensions, real estate and debts; the fatwas of Dar al-Ifta of Egypt and the General Iftaa Department of Jordan; the Zakat and Ushr Ordinance of Pakistan; the zakat centre of the Federal Territories of Malaysia; the Saudi zakat authority for the solar-year rate; and, for zakat al-fitr, fidya and kaffarah, the amounts published for Ramadan 1447 by the bodies listed on each page. Gold and silver prices come from gold-api.com and exchange rates from the European Central Bank and ExchangeRate-API, read once a day.</p>
+    <h2>What it leaves out</h2>
+    <p>It does not compute zakat on crops, livestock or minerals, and its inheritance calculator stops at brothers and sisters: nephews, uncles and cousins, and distant kindred, are named but not computed. It never presents an amount for 1448 (2027) before the bodies publish it. The <a href={route('method', lang)}>method page</a> lists each rule with its source; the <a href={route('editorial', lang)}>editorial policy</a> explains corrections.</p>
+    <h2>Contact</h2>
+    <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, for corrections and sources. We answer questions about a rule or a calculation, not about your personal situation, which a scholar you trust can look at.</p>
+  </article>
+</PageLayout>

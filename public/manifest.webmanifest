@@ -1,0 +1,21 @@
+{
+ "name": "Zakat Calculator",
+ "short_name": "Zakat Calculator",
+ "description": "Zakat calculator with the nisab of the day in 40 currencies, zakat al-fitr, fidya, kaffarah and Islamic inheritance shares, in English and Arabic.",
+ "start_url": "/en/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#0E5A4A",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

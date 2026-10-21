@@ -1,0 +1,9 @@
+---
+/** The calculator of a page: a declarative calculator of tool-specs.ts, in the language of the page. */
+import SpecTool from './calc/SpecTool';
+import { route, type Locale } from '../i18n/routes';
+interface Props { kind: string; arg?: Record<string, number | string>; idPrefix?: string; lang: Locale }
+const { kind, arg, idPrefix = 't', lang } = Astro.props;
+const methodHref = route('method', lang);
+---
+<SpecTool client:load kind={kind} lang={lang} arg={arg ? JSON.stringify(arg) : undefined} methodHref={methodHref} idPrefix={idPrefix} />

@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { CONTACT_EMAIL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'ar';
+const path = route('contact', lang);
+const description = 'راسل ناشر حاسبة الزكاة بشأن نصاب أو حكم أو مبلغ معلن أو مصدر. بالبريد الإلكتروني فقط، بلا فتوى في حالتك الخاصة وبلا أي طلب تبرع أو جمع مال.';
+---
+<PageLayout title="اتصل بحاسبة الزكاة: تصحيح حكم أو مبلغ أو مصدر منشور" description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'اتصل بنا', description, path, lang })]} breadcrumbs={[{ label: 'اتصل بنا' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>اتصل بنا</h1>
+    <p>بالبريد الإلكتروني: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. لا نموذج ولا نشرة بريدية: الموقع لا يجمع زكاة ولا يبيع شيئًا، فلا سبب لحفظ العناوين.</p>
+    <h2>رسائل تفيدنا</h2>
+    <ul>
+      <li>مبلغ لزكاة الفطر أو الفدية أو الكفارة أعلنه مجلس أو هيئة زكاة أو غيّره، مع رابط الإعلان.</li>
+      <li>حكم معروض في صفحة يخالف المصدر الذي تذكره، مع موضع النص.</li>
+      <li>مسألة ميراث تعطي فيها الحاسبة نصيبًا يخالف جوابًا منشورًا، مع الورثة والمرجع.</li>
+      <li>تضمين الحاسبة في موقع مسجد أو جمعية أهلية أو مدرسة: الشيفرة في <a href={route('widget', lang)}>صفحة التضمين</a>.</li>
+    </ul>
+    <h2>ما لا نستطيعه</h2>
+    <p>لا نفتي ولا نحكم في حالتك الخاصة، ولا نجمع زكاتك ولا نوصلها، ولا نوصي بجمعية. لحالتك اسأل عالمًا تثق به، وللتركة التي يحكمها قانون بلدك الموثق أو المحكمة المختصة.</p>
+    <h2>الناشر</h2>
+    <LegalIdentity lang={lang} />
+  </div>
+</PageLayout>
