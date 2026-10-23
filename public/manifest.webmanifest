@@ -1,6 +1,6 @@
 {
- "name": "Zakat Calculator",
- "short_name": "Zakat Calculator",
+ "name": "Nisab Today",
+ "short_name": "Nisab Today",
  "description": "Zakat calculator with the nisab of the day in 40 currencies, zakat al-fitr, fidya, kaffarah and Islamic inheritance shares, in English and Arabic.",
  "start_url": "/en/",
  "display": "standalone",

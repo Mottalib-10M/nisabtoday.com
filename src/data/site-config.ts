@@ -1,6 +1,6 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://zakat-calculator.example";
-export const SITE_NAMES: Record<string, string> = {"en": "Zakat Calculator", "ar": "حاسبة الزكاة"};
+export const SITE_URL = "https://nisabtoday.com";
+export const SITE_NAMES: Record<string, string> = {"en": "Nisab Today", "ar": "حاسبة الزكاة"};
 export const LANG_TAGS: Record<string, string> = {"en": "en", "ar": "ar"};
 export const OG_LOCALES: Record<string, string> = {"en": "en_GB", "ar": "ar_AR"};
 export const LOCALE_TAG = 'en-GB';
@@ -16,7 +16,7 @@ export const AUTHOR_DESC: Record<string, string> = {"en": "Radif Partners is an 
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"en": ["Zakat on cash, gold, shares, pensions and business stock", "Gold and silver nisab", "Zakat al-fitr, fidya and kaffarah", "Islamic inheritance (faraid)"], "ar": ["زكاة المال والذهب والأسهم", "نصاب الزكاة بالذهب والفضة", "زكاة الفطر والفدية والكفارة", "علم الفرائض والمواريث"]};
-export const CONTACT_EMAIL = "contact@zakat-calculator.example";
+export const CONTACT_EMAIL = "contact@nisabtoday.com";
 export const THEME_COLOR = '#0E5A4A';
 export const LOGO_SYMBOL = 'Z';
 export const BING_VERIFY_CODE = '';
@@ -31,7 +31,7 @@ export const CONSENT_MODE: 'opt-in' | 'notice' | 'none' = 'none';
  *  pages légales régénérées : `python3 scripts/gen-legal-pages.py .`. Vide = pas de GA4. */
 export const GA4_ID = '';
 /** Projet Microsoft Clarity (compte amradif), chargé sans cookie. Vide = aucune mesure. */
-export const CLARITY_ID = '';
+export const CLARITY_ID = 'z260ml70m9';
 export const INDEXNOW_KEY = 'be0a2748d544b1760a37ecaef8e3aa28';
 
 /* ------------------------------------------------------------------------- *

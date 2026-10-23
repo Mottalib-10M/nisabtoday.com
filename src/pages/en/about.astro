@@ -8,8 +8,8 @@ import { profilePageSchema, breadcrumbSchema } from '../../lib/seo';
 const lang = 'en';
 const h = helpers(lang);
 const path = route('about', lang);
-const title = 'Zakat Calculator Publisher 2026: Who Runs This Site';
-const description = 'Zakat Calculator is published by Radif Partners, an independent company in France. Not a charity or religious authority: no donation, no account, sources cited.';
+const title = 'Nisab Today Publisher 2026: Who Runs This Zakat Site';
+const description = 'Nisab Today is published by Radif Partners, an independent company in France. Not a charity or religious authority: no donation, no account, sources cited.';
 ---
 <PageLayout title={title} description={description} lang={lang} jsonLd={[profilePageSchema({ path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path }])]} breadcrumbs={[{ label: 'About' }]}>
   <article class="prose prose-slate max-w-none prose-headings:font-serif">
