@@ -19,7 +19,8 @@ export const inGroup = (g: Group, lang: Locale): NavLink[] => GUIDES.filter((p) 
 export function navCategories(lang: Locale): NavCategory[] {
   return GROUPS.map((g) => ({ label: g.label[lang], links: inGroup(g.id, lang) })).filter((c) => c.links.length);
 }
-export const navDirect = (lang: Locale): NavLink[] => [link('method', lang)];
+// Methode : liee en bas de page, hors du menu du haut pour qu'il tienne sur une ligne.
+export const navDirect = (_lang: Locale): NavLink[] => [];
 export const footerColumns = (lang: Locale): NavCategory[] => [
   ...navCategories(lang),
   { label: lang === 'ar' ? 'عن الموقع' : 'This site', links: ['home', 'method', 'about', 'contact', 'editorial', 'widget', 'terms', 'privacy', 'cookies'].map((i) => link(i, lang)) },
