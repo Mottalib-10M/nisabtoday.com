@@ -63,14 +63,21 @@ const zakatTool: Maker = (lang, a) => {
     inputs,
     run: (v) => {
       const cur = S(v.cur);
-      const z = computeZakat({ ...DEFAULT_IN, cur, cash: N(v.cash), goldG: N(v.goldG), goldK: N(v.goldK), jewelG: N(v.jewelG), jewelK: N(v.jewelK), jewelRule: S(v.jewelRule) as ZakatIn['jewelRule'],
+      const zin: ZakatIn = { ...DEFAULT_IN, cur, cash: N(v.cash), goldG: N(v.goldG), goldK: N(v.goldK), jewelG: N(v.jewelG), jewelK: N(v.jewelK), jewelRule: S(v.jewelRule) as ZakatIn['jewelRule'],
         silverG: N(v.silverG), silverF: 925, shares: N(v.shares), sharesMode: S(v.sharesMode) as ZakatIn['sharesMode'], investPct: N(v.investPct), pension: N(v.pension), pensionRule: S(v.pensionRule) as ZakatIn['pensionRule'],
-        crypto: 0, stock: N(v.stock), receivable: 0, rentSaved: 0, debts: N(v.debts), debtRule: S(v.debtRule) as ZakatIn['debtRule'], basis: S(v.basis) as NisabBasis, conv: S(v.conv) as Convention, year: S(v.year) as ZakatIn['year'] });
+        crypto: 0, stock: N(v.stock), receivable: 0, rentSaved: 0, debts: N(v.debts), debtRule: S(v.debtRule) as ZakatIn['debtRule'], basis: S(v.basis) as NisabBasis, conv: S(v.conv) as Convention, year: S(v.year) as ZakatIn['year'] };
+      const z = computeZakat(zin);
+      // Là où les écoles divergent, l'autre résultat s'affiche à côté (nisab de l'autre métal, bijoux portés).
+      const otherBasis: NisabBasis = zin.basis === 'gold' ? 'silver' : 'gold';
+      const zBasis = computeZakat({ ...zin, basis: otherBasis });
+      const zJewel = zin.jewelG > 0 ? computeZakat({ ...zin, jewelRule: zin.jewelRule === 'include' ? 'exclude' : 'include' }) : null;
       const m = (x: number) => money(x, cur, lang);
       const rows: ToolOut['rows'] = z.lines.map((l) => [t(LINE_LABEL[l.k][0], LINE_LABEL[l.k][1]) + (l.counted < l.value ? t(` (${m(l.counted)} counted)`, ` (يُحتسب ${m(l.counted)})`) : ''), m(l.zakat), l.zakat]);
       if (z.debtsDeducted) rows.push([t('Debts deducted', 'الديون المخصومة'), `-${m(z.debtsDeducted)}`]);
       rows.push([t('Net zakatable wealth', 'صافي المال الزكوي'), m(z.net)]);
       rows.push([t(`Nisab today (${v.basis === 'gold' ? 'gold' : 'silver'})`, `النصاب اليوم (${v.basis === 'gold' ? 'الذهب' : 'الفضة'})`), m(z.nisab)]);
+      rows.push([t(`Zakat on the ${otherBasis} nisab instead`, `الزكاة على نصاب ${otherBasis === 'gold' ? 'الذهب' : 'الفضة'} بدلاً من ذلك`), m(zBasis.zakat)]);
+      if (zJewel) rows.push([zin.jewelRule === 'include' ? t('Zakat if worn jewellery is exempt (majority)', 'الزكاة إن لم يُزكَّ الحلي الملبوس (الجمهور)') : t('Zakat if worn jewellery counts (Hanafi)', 'الزكاة إن زُكّي الحلي الملبوس (الحنفية)'), m(zJewel.zakat)]);
       return {
         label: t('Zakat due', 'الزكاة الواجبة'), value: m(z.zakat),
         sub: z.due ? t(`${pct(z.rate, z.rate === 0.025 ? 1 : 3)} of ${m(z.net)}: above the nisab`, `${pct(z.rate, z.rate === 0.025 ? 1 : 3, 'ar')} من ${m(z.net)}: فوق النصاب`) : t(`Below the nisab of ${m(z.nisab)}: no zakat on this wealth`, `دون النصاب البالغ ${m(z.nisab)}: لا زكاة على هذا المال`),
