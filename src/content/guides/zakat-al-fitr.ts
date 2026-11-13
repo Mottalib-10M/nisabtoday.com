@@ -14,7 +14,7 @@ export default defineGuide({
     title: 'Zakat al-Fitr 2026: Official Amount per Person by Country',
     description: 'Zakat al-fitr 2026: the official amount per person set by fatwa councils and zakat bodies in 12 countries, the sa’ in kilograms and the debate on paying cash.',
     h1: 'Zakat al-fitr: how much per person',
-    intro: 'Enter the number of people you pay for and pick the body of your country, or type your own amount per person if none publishes one.',
+    intro: 'Enter the number of people you pay zakat al-fitr for and pick the body of your country, or type your own amount per person if none publishes one.',
     resume: `Zakat al-fitr is one sa’ of staple food for every Muslim in the household, young or old, paid before the Eid prayer that ends Ramadan. The sa’ is a measure of volume; converted to weight it is about ${sa.majority} kg of wheat for the majority of scholars, according to Dar al-Ifta of Egypt, ${sa.jordan} kg for the Jordanian Iftaa Council and the UAE Council for Fatwa, and about ${sa.caution} kg as a precaution in Saudi practice. For Ramadan 1447, official bodies converted it into cash: ${E.money(E.fitr('uae').fitr!, 'AED')} in the Emirates, ${E.money(E.fitr('egypt').fitr!, 'EGP')} in Egypt as a minimum, ${E.money(E.fitr('pakistan').fitr!, 'PKR')} in Pakistan on wheat, ${E.money(E.fitr('usa').fitr!, 'USD')} recommended by the Fiqh Council of North America. A family of five in the Emirates therefore paid ${E.money(5 * E.fitr('uae').fitr!, 'AED')}. Paying in cash is accepted by the Hanafi school and by these bodies; the Maliki, Shafi‘i and Hanbali schools ask for food. Amounts for 1448 are to be published before Ramadan.`,
     faqs: [
       { q: 'Who do I have to pay zakat al-fitr for?', a: 'For yourself and for every Muslim you are responsible for maintaining: your wife, your young children, and dependants who live on your income. A baby born before sunset on the last day of Ramadan is included. Adult children with their own income pay for themselves, though a parent may pay on their behalf.' },
@@ -25,7 +25,7 @@ export default defineGuide({
     body: (h) => {
       const rows = withFitr.map((r) => [r.country.en, r.body.en, h.money2(r.fitr!, r.cur), h.day(r.date)]);
       return `
-<h2>Where the duty comes from</h2>
+<h2>Where the duty of zakat al-fitr comes from</h2>
 <p>Ibn ‘Umar reports that the Prophet made zakat al-fitr obligatory as one sa’ of dates or one sa’ of barley on every Muslim, slave or free, male or female, young or old, and ordered that it be paid before people go out to the prayer (${h.src('bukhari-1503', 'Sahih al-Bukhari 1503')}). Two aims are usually given: it cleanses the fast of idle talk, and it makes sure the poor have food on the day of Eid. That second aim explains why the timing is strict and why the recipients are the poor and needy.</p>
 <p>The duty falls on anyone who, on the night of Eid, has more than the food needed by his household for that day and night. It does not depend on the nisab of zakat on wealth. The head of the family pays for those he maintains.</p>
 
@@ -62,7 +62,7 @@ ${h.mini('fitr', { t: 'Zakat al-fitr with your own price per person', p: ['n', '
     title: 'زكاة الفطر 2026: مقدارها عن الفرد بالريال والدرهم والجنيه',
     description: 'زكاة الفطر 2026: المقدار عن الفرد كما أعلنته دور الإفتاء وهيئات الزكاة لعام 1447، ووزن الصاع بالكيلوغرام عند كل جهة، وخلاف المذاهب في إخراج القيمة نقدًا.',
     h1: 'زكاة الفطر: كم تُخرج عن كل فرد',
-    intro: 'أدخل عدد من تُخرج عنهم واختر الجهة الرسمية في بلدك، أو اكتب مبلغك عن الفرد إن لم تُعلن جهتك مقدارًا.',
+    intro: 'أدخل عدد من تُخرج عنهم زكاة الفطر واختر الجهة الرسمية في بلدك، أو اكتب مبلغك عن الفرد إن لم تُعلن جهتك مقدارًا.',
     resume: `زكاة الفطر صاع من غالب قوت البلد عن كل مسلم تعوله، صغيرًا كان أو كبيرًا، تُخرج قبل صلاة العيد. والصاع مكيال لا وزن، فاختلفت الجهات في تقديره: ${A.dec(sa.majority, 2)} كغ من القمح عند الجمهور كما تذكر دار الإفتاء المصرية، و${A.dec(sa.jordan, 1)} كغ عند مجلس الإفتاء الأردني ومجلس الإمارات للإفتاء الشرعي، ونحو ${sa.caution} كغ احتياطًا في العمل السعودي. وقد حددت الجهات الرسمية قيمتها لعام 1447: ${A.money(A.fitr('uae').fitr!, 'AED')} في الإمارات، و${A.money(A.fitr('qatar').fitr!, 'QAR')} في قطر، و${A.money(A.fitr('egypt').fitr!, 'EGP')} حدًّا أدنى في مصر، و${A.money2(A.fitr('jordan').fitr!, 'JOD')} في الأردن، و${A.money(A.fitr('morocco').fitr!, 'MAD')} في المغرب، و${A.money(A.fitr('algeria').fitr!, 'DZD')} في الجزائر. فأسرة من ستة أفراد في الدوحة أخرجت ${A.money(6 * A.fitr('qatar').fitr!, 'QAR')}. ويجيز الحنفية إخراج القيمة، ويشترط المالكية والشافعية والحنابلة الطعام، فمن اتبع قولهم اشترى الأرز أو القمح وسلمه إلى الفقير. ومن كان في بلد لم تعلن فيه جهة رسمية مبلغًا، كالسعودية والكويت، يحسب ثمن الصاع بسعر السوق ويكتبه في الحاسبة. أما مقادير 1448 فلم تُعلن بعد، وتصدر عادة قبيل رمضان أو في أوله.`,
     faqs: [
       { q: 'عمّن يجب عليّ إخراج زكاة الفطر؟', a: 'عن نفسك وعن كل مسلم تلزمك نفقته: الزوجة والأولاد الصغار ومن يعيش في كفالتك. ويدخل المولود إذا وُلد قبل غروب شمس آخر يوم من رمضان. أما الأولاد البالغون الذين لهم دخل فيخرجون عن أنفسهم، ويجوز للأب أن يخرج عنهم بإذنهم.' },
@@ -75,7 +75,7 @@ ${h.mini('fitr', { t: 'Zakat al-fitr with your own price per person', p: ['n', '
       const rows = arab.map((r) => [r.country.ar, r.body.ar, h.money2(r.fitr!, r.cur), h.day(r.date)]);
       const riceSar = 6;
       return `
-<h2>أصل الوجوب وحكمته</h2>
+<h2>أصل وجوب زكاة الفطر وحكمته</h2>
 <p>روى ابن عمر رضي الله عنهما أن النبي صلى الله عليه وسلم فرض زكاة الفطر صاعًا من تمر أو صاعًا من شعير على العبد والحر، والذكر والأنثى، والصغير والكبير من المسلمين، وأمر بها أن تؤدى قبل خروج الناس إلى الصلاة (${h.src('bukhari-1503', 'صحيح البخاري 1503')}). ويذكر العلماء لها حكمتين: أنها طهرة للصائم من اللغو والرفث، وطعمة للمساكين يستغنون بها يوم العيد عن السؤال. ومن هنا جاء التشديد في وقتها، وقصر مصرفها على الفقراء والمساكين.</p>
 <p>وتجب على من ملك ليلة العيد ما يزيد على قوته وقوت من يعولهم يومه وليلته، ولا يُشترط فيها النصاب المعروف في زكاة المال، فقد تجب على من لا تجب عليه زكاة ماله.</p>
 

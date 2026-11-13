@@ -27,7 +27,7 @@ export default defineGuide({
       const c = 'SGD';
       const lunar = h.zakat({ cur: c, cash: 26000 }), solar = h.zakat({ cur: c, cash: 26000, year: 'solar' });
       return `
-<h2>The rule of the lunar year</h2>
+<h2>When zakat is due: the rule of the lunar year</h2>
 <p>Ali ibn Abi Talib reports that the Prophet set five dirhams on two hundred once a year has passed over them, and that no zakat is due on property until a year has passed over it (${h.src('a-abudawud-1573', 'Sunan Abi Dawud 1573')}). The year is the Hijri year of twelve lunar months. Because it runs about eleven days short of the Gregorian year, a zakat day kept in the Islamic calendar slides back through the seasons: a family that pays in late October one year will pay in mid October the next.</p>
 <p>The clock starts on the day your zakatable wealth first reaches the nisab. A graduate who starts saving in January and crosses the threshold in June begins the hawl in June, not in January. Few people remember that day, so the common practice is to fix a date and keep it. The calculator above takes any start and returns the end of the lunar year, with its Hijri equivalent, in the ${h.src('ummalqura', 'Umm al-Qura calendar')} used in Saudi Arabia. Where the month begins with a local sighting of the moon, the date may shift by a day.</p>
 
@@ -60,7 +60,7 @@ ${h.mini('hawl', { t: 'Last year’s zakat day to this year’s', p: ['d', 'm', 
     title: 'موعد الزكاة 2026: حساب الحول الهجري ونهاية سنتك الزكوية',
     description: 'موعد الزكاة 2026: تجب زكاة المال بعد حولان حول هجري كامل على بلوغ النصاب. احسب نهاية حولك بتقويم أم القرى، واعرف ما يُزكى يوم حصاده أو قبضه من الأموال.',
     h1: 'متى تجب الزكاة',
-    intro: 'أدخل اليوم الذي بلغ فيه مالك النصاب أول مرة، أو يوم زكاتك في العام الماضي، فتعطيك الحاسبة التاريخ المقابل بعد حول هجري كامل.',
+    intro: 'أدخل اليوم الذي بلغ فيه مالك النصاب أول مرة، أو يوم زكاتك في العام الماضي، فتعطيك الحاسبة موعد الزكاة بعد حول هجري كامل.',
     resume: `تجب زكاة المال إذا ملك المسلم النصاب وحال عليه الحول، أي مضت عليه سنة هجرية كاملة. والأصل فيه حديث علي رضي الله عنه عند أبي داود: ليس في مال زكاة حتى يحول عليه الحول. والسنة الهجرية أقصر من الميلادية بنحو أحد عشر يومًا، فيتقدم يوم الزكاة في التقويم الميلادي كل عام. فمن بدأ حوله في ${A.day(A.PRICE_DAY)}، الموافق ${A.hijri(A.PRICE_DAY)}، انتهى حوله في ${A.day(hwA.end)}، الموافق ${A.hijri(hwA.end)}، بعد ${hwA.days} يومًا بتقويم أم القرى. وكثير من الأسر تجعل زكاتها في رمضان، ويُتوقع أن يبدأ رمضان 1448 في ${A.day(A.ramadan1448)}. ولبعض الأموال موعد خاص: فالزروع تُزكى يوم حصادها، وأجرة العقار بعد حول من قبضها، والتقاعد المقفل والدين المتعثر يُزكيان لسنة واحدة عند القبض على قول مجمع الفقه الإسلامي الدولي.`,
     faqs: [
       { q: 'ما معنى الحول في الزكاة؟', a: 'الحول سنة هجرية كاملة يمضيها المال الزكوي في ملك صاحبه بعد بلوغه النصاب، ولا تجب الزكاة قبل تمامها. ويبدأ من اليوم الذي بلغ فيه المال النصاب، وينتهي في مثل ذلك اليوم من العام الهجري التالي. وما يستفيده المرء في أثناء الحول من راتب ونحوه يُضم إلى ماله ويُزكى معه في يوم الزكاة عند كثير من الناس.' },

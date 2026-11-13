@@ -17,7 +17,7 @@ export default defineGuide({
     title: 'Wife and Husband Inheritance Share 2026: 1/8, 1/4 or 1/2',
     description: 'Wife and husband inheritance share in Islam for 2026: one eighth or one quarter for the wife, one quarter or one half for the husband, with worked amounts.',
     h1: 'The share of a wife and of a husband',
-    intro: 'The spouse’s share depends on one question only: did the deceased leave a child or a son’s child?',
+    intro: 'The inheritance share of a wife or husband depends on one question only: did the deceased leave a child or a son’s child?',
     resume: `Under Qur’an 4:12 a husband inherits one half of his wife’s estate when she leaves no child and no son’s child, and one quarter when she does. A wife inherits one quarter of her husband’s estate when he leaves no child and no son’s child, and one eighth when he does. Several wives do not multiply this: they share the same quarter or eighth equally, so with four wives and a son each wife takes ${E.frac(g(w4, 'wives')!.perHead)} of the estate. The child counted can be from another marriage. The spouse is never excluded by any other heir, but the share can shrink by ‘awl when the fixed shares exceed the estate, and the spouse takes no part of a returned surplus (radd) while other relatives with fixed shares are alive. The shares are taken from the estate after funeral costs, debts (including any unpaid dowry, which is a debt owed to the wife) and a bequest of up to one third. A divorced spouse inherits only if the death happens during the waiting period of a revocable divorce.`,
     faqs: [
       { q: 'Does a child from another marriage reduce the spouse’s share?', a: 'Yes. The Qur’an speaks of a child of the deceased, not a child of the couple. If a man leaves a wife and a son from his first marriage, the wife takes one eighth, exactly as if the son were hers. The same applies to a husband whose late wife had children from a former husband: he takes one quarter, not one half.' },
@@ -40,7 +40,7 @@ export default defineGuide({
 ${h.table(['Spouse', 'No child or son’s child', 'With a child or son’s child'], [['Husband', '1/2', '1/4'], ['Wife or wives together', '1/4', '1/8']], 'Shares of the estate after funeral costs, debts and any bequest.', ['l', 'r', 'r'])}
 <p>The spouse is one of the heirs no one can exclude, like the parents and the children. What changes is the size of the share, and two mechanisms can still move it: ‘awl, which lowers every fixed share when they add up to more than the estate, and the rule that a surplus returned to the family (radd) skips the spouse while relatives with fixed shares are alive.</p>
 
-<h2>Worked cases on ${h.money(est, cur)}</h2>
+<h2>Wife and husband shares worked out on ${h.money(est, cur)}</h2>
 <p>Each line below is a different family, all with the same estate after debts. The amount is the share of the spouse group; for several wives, the last column gives what each one takes.</p>
 ${h.table(['Family', 'Spouse share', 'Amount', 'Each'], [
   row(a, 'wives', 'Wife, mother, father (no child)'),

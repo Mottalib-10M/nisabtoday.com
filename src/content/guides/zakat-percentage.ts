@@ -53,7 +53,7 @@ ${h.table(['Wealth', 'Rate', 'When'], [
         ['Crops watered by wells or pumps', '5 %', 'At harvest'],
       ], 'Main zakat rates and their timing.', ['l', 'r', 'l'])}
 
-<h2>Checking your figure</h2>
+<h2>Checking your zakat figure</h2>
 <p>Whatever tool you use, the last step can be checked by hand: divide the net total by 40. If the result differs from what a calculator shows, look first at the nisab measure, the treatment of jewellery and whether debts were deducted, since those change the base rather than the rate. The ${h.a('how-to-calculate-zakat', 'step by step page')} walks through the base, and the ${h.a('when-is-zakat-due', 'zakat date page')} tells you which day to measure it on.</p>
 `;
     },

@@ -15,7 +15,7 @@ export default defineGuide({
     title: 'Fidya 2026: Amount per Missed Fast and Who Has to Pay It',
     description: 'Fidya 2026: the amount per fast missed for good, set by six official bodies, the mudd or half sa’ of each school, and the rule on make-up fasts left too late.',
     h1: 'Fidya: feeding a poor person for each fast you cannot keep',
-    intro: 'Enter the number of fasts you cannot make up and pick the body of your country, or type the price of one meal where you live.',
+    intro: 'Enter the number of fasts you cannot make up and pick the body of your country, or type the price of one meal where you live, to work out the fidya.',
     resume: `Fidya is the feeding of one poor person for each day of Ramadan that someone cannot fast and will never be able to make up, such as a very old person or someone with a lasting illness. Its basis is the Qur’an, 2:184. The schools measure the meal differently: one mudd of food a day for the Maliki and Shafi‘i schools, about ${E.dec(mudd, 2)} kg on the ${sa.majority} kg sa’; half a sa’ for the Hanafi school, which is ${sa.hanafiHalfSaKg} kg of wheat. Official bodies turned this into money for 1447: ${E.money(E.fitr('uae').fidya!, 'AED')} a day in the Emirates, ${E.money(E.fitr('pakistan').fidya!, 'PKR')} in Pakistan on wheat, ${E.money(E.fitr('usa').fidya!, 'USD')} recommended by the Fiqh Council of North America, ${E.money2(E.fitr('singapore').fidya!, 'SGD')} in Singapore and ${E.money(E.fitr('indonesia').fidya!, 'IDR')} in Indonesia. For thirty days missed, a resident of Abu Dhabi pays ${E.money(30 * E.fitr('uae').fidya!, 'AED')}. Amounts for 1448 are to be published before Ramadan.`,
     faqs: [
       { q: 'Who pays fidya instead of making up the fast?', a: 'Someone who cannot fast and has no realistic hope of being able to later: the very old, and people with a chronic illness that rules out fasting. A temporary illness or a journey calls for making up the days, not fidya. When in doubt about your own case, ask a doctor and a scholar you trust together.' },
@@ -60,7 +60,7 @@ ${h.mini('fidya', { t: 'Fidya at your local meal price', p: ['days', 'per'], d: 
     title: 'فدية الصيام 2026: مقدارها عن كل يوم ومن تجب عليه ومتى',
     description: 'فدية الصيام 2026: مقدارها عن اليوم كما أعلنتها مجالس الإفتاء لعام 1447 بالدرهم والدينار، والمد ونصف الصاع عند المذاهب الأربعة، وحكم من أخّر القضاء عن وقته.',
     h1: 'فدية الصيام: إطعام مسكين عن كل يوم',
-    intro: 'أدخل عدد الأيام التي لا تستطيع قضاءها واختر الجهة الرسمية في بلدك، أو اكتب ثمن وجبة واحدة حيث تقيم.',
+    intro: 'أدخل عدد أيام الصيام التي لا تستطيع قضاءها واختر الجهة الرسمية في بلدك، أو اكتب ثمن وجبة واحدة حيث تقيم.',
     resume: `فدية الصيام إطعام مسكين عن كل يوم من رمضان يفطره من لا يقدر على الصوم ولا يُرجى أن يقدر على قضائه، كالشيخ الكبير والمريض مرضًا مزمنًا، وأصلها قوله تعالى في سورة البقرة: ﴿وَعَلَى ٱلَّذِينَ يُطِيقُونَهُۥ فِدْيَةٌ طَعَامُ مِسْكِينٍ﴾. واختلفت المذاهب في قدر الإطعام: مدّ عن كل يوم عند المالكية والشافعية، أي نحو ${A.dec(mudd, 2)} كغ على صاع ${A.dec(sa.majority, 2)} كغ، ونصف صاع عند الحنفية، وهو ${A.dec(sa.hanafiHalfSaKg, 3)} كغ من البر، ونصف صاع عند الحنابلة إلا البر فمدّ. وقد قدّر مجلس الإمارات للإفتاء الشرعي الفدية لعام 1447 بـ3.250 كغ من البر أو ${A.money(A.fitr('uae').fidya!, 'AED')} عن اليوم، وقدّرها مجلس الإفتاء الأردني بـ${A.money2(A.fitr('jordan').fidya!, 'JOD')} في حدها الأدنى. فمن أفطر الشهر كله في الإمارات يخرج ${A.money(30 * A.fitr('uae').fidya!, 'AED')}، ومن كان في الأردن يخرج ${A.money(30 * A.fitr('jordan').fidya!, 'JOD')} على الأقل. وتُدفع للفقراء والمساكين طعامًا أو قيمة على قول الحنفية. أما مقادير 1448 فلم تُعلن بعد، وتصدر عادة قبيل رمضان.`,
     faqs: [
       { q: 'من الذي تلزمه الفدية بدل القضاء؟', a: 'من عجز عن الصيام عجزًا لا يُرجى زواله: الشيخ الكبير والعجوز اللذان لا يطيقان الصوم، والمريض مرضًا مزمنًا يمنعه الأطباء من الصيام. أما المريض مرضًا عارضًا والمسافر فعليهما القضاء لا الفدية. وإذا اشتبه عليك حالك فاستشر طبيبًا وعالمًا تثق بهما معًا.' },
@@ -94,7 +94,7 @@ ${h.mini('fidya', { t: 'فدية الأيام التي لا تُقضى', p: ['da
 <p>هذه مسألة أخرى غير مسألة العاجز: رجل أفطر لعذر يزول، وتمكن من القضاء في سنته فلم يقضِ حتى دخل رمضان التالي. فالشافعية يوجبون عليه مع القضاء فدية مدّ عن كل يوم، وتتكرر بتكرر السنين، وبهذا يعمل ${h.src('ppz-fidyah', 'مركز الزكاة في الأقاليم الاتحادية بماليزيا')} في أمثلته. والحنفية لا يوجبون إلا القضاء. وقد أعلن ${h.src('b-muis-1447', 'المجلس الإسلامي في سنغافورة')} سنة 2026 أنه لم يعد يلزم بالفدية المضاعفة افتراضيًا، مع بقاء التطوع بها مفتوحًا.</p>
 ${h.mini('fidya', { t: 'الفدية بثمن الوجبة في بلدك', p: ['days', 'per'], d: { days: 10, body: 'own', per: 15 } })}
 
-<h2>الفدية عن الميت</h2>
+<h2>فدية الصيام عن الميت</h2>
 <p>إذا مات من عليه قضاء أيام من رمضان وقد تمكن من قضائها فلم يفعل، فالجمهور على أن يُطعم عنه وليه من تركته عن كل يوم مسكينًا، بالمقدار الذي يعتمده مذهبه، ويرى بعض العلماء أن يصوم عنه وليه. أما من مات قبل أن يتمكن من القضاء، كمن استمر به المرض حتى مات، فلا شيء عليه ولا على ورثته. وتُخرج الفدية من التركة قبل قسمتها كسائر الديون، فإن لم يترك مالًا وتبرع بها أحد أقاربه أجزأت عند من يقول بها.</p>
 
 <h2>كيف تُخرج</h2>

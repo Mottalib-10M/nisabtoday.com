@@ -30,7 +30,7 @@ export default defineGuide({
 <p>The rule is in the Qur’an: “its expiation is the feeding of ten needy people from the average of that which you feed your families, or clothing them, or the freeing of a slave. But whoever cannot find it, then a fast of three days” (${h.src('quran-5-89', 'Qur’an 5:89')}). Three features set it apart from the Ramadan kaffarah. The number is ten, not sixty. The first options are a free choice, not a sequence. And fasting comes last, for someone who cannot find the means for the others. Freeing a slave no longer applies, which leaves feeding, clothing, or for the poor themselves, three days of fasting.</p>
 ${h.mini('kaffarah', { t: 'Feeding ten poor people for one broken oath', p: ['type', 'times', 'body'], d: { type: 'oath', times: 1, body: 'uae' } })}
 
-<h2>Which oaths need it</h2>
+<h2>Which oaths need a kaffarah</h2>
 <p>Scholars distinguish three kinds of oath, and only one of them leads to kaffarah:</p>
 <ul>
 <li><strong>A binding oath about the future</strong>, such as swearing not to speak to someone or to finish a task by Friday. Breaking it calls for kaffarah. If keeping it would mean doing wrong, cutting off a relative for instance, you should break it and expiate.</li>

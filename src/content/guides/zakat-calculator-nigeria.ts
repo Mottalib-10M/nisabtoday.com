@@ -13,7 +13,7 @@ export default defineGuide({
     title: 'Zakat in Nigeria 2026: Nisab in Naira, Trade and Harvests',
     description: 'Zakat in Nigeria for 2026: today’s nisab in naira, zakat on shop stock and dollar accounts, how an RSA pension is counted, and the tenth due on crops.',
     h1: 'Zakat in Nigeria, in naira',
-    intro: 'Enter cash in naira and the naira value of any dollar savings, the stock of your shop at selling price, and the debts due this month.',
+    intro: 'Enter cash in naira and the naira value of any dollar savings, the stock of your shop at selling price, and the debts due this month; zakat is then worked out in naira.',
     resume: `At the spot prices of ${E.priceDay}, the nisab in naira is ${E.money(E.nisab('silver', 'NGN'), 'NGN')} on the silver measure and ${E.money(E.nisab('gold', 'NGN'), 'NGN')} on the gold measure. Because gold and silver are priced in dollars, the naira figure moves with the exchange rate as much as with the metal, so last Ramadan’s number is rarely right this Ramadan. Zakat is ${E.pct(E.P.rate.lunar)} of your net zakatable wealth once it reaches the threshold you follow. Nigeria has no federal zakat law; Muslims in Kano, Sokoto, Ilorin or Lagos follow their scholars. Much of the zakat paid in the country is on trade: a provisions trader in Kano with ${E.money(4100000, 'NGN')} of stock at selling price, ${E.money(2350000, 'NGN')} in cash and ${E.money(760000, 'NGN')} owed to suppliers this month has ${E.money(kano.net, 'NGN')} of net wealth and owes ${E.money(kano.zakat, 'NGN')}. Farmers have a separate duty on the harvest.`,
     faqs: [
       { q: 'How do I count dollars held in a domiciliary account?', a: 'Convert them to naira at the rate you could actually get on your zakat day and add them to your other cash. The currency does not change the zakat; it only changes the figure in naira. If you pay in naira, use the same rate so the amount you give matches what you counted.' },
@@ -26,7 +26,7 @@ export default defineGuide({
       const dom = h.zakat({ cur: 'NGN', cash: 900000 + usdNgn });
       const noDebt = h.zakat({ cur: 'NGN', cash: 2350000, stock: 4100000, debts: 760000, debtRule: 'none' });
       return `
-<h2>A nisab that follows the naira</h2>
+<h2>A zakat nisab that follows the naira</h2>
 <p>The nisab is a weight of metal: ${h.nisabGrams('silver')} g of silver or ${h.nisabGrams('gold')} g of gold, from the hadith on five awaq in ${h.src('bukhari-1447', 'Sahih al-Bukhari')}. Its value in naira is that weight times the ${h.src('gold-api', 'spot price')} in dollars times the exchange rate. On ${h.priceDay} that gives ${h.money(sN, 'NGN')} for silver and ${h.money(gN, 'NGN')} for gold. A family whose savings were below the line a year ago may be above it now simply because the naira has moved. Look up the figure on the day you pay, not the one announced in the mosque last year.</p>
 ${h.mini('nisab', { t: 'Nisab today in naira', p: ['cur'], d: { cur: 'NGN' } })}
 

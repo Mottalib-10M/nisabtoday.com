@@ -37,7 +37,7 @@ export default defineGuide({
         ['<strong>Total on the zakat day</strong>', `<strong>${h.money(big, cur)}</strong>`],
       ];
       return `
-<h2>What goes into the total</h2>
+<h2>Which savings go into the zakat total</h2>
 <p>Savings, for zakat, means money you own and can use. That covers more than the account with “savings” in its name. A current account, an instant access saver, a notice account, a fixed term deposit, the cash in a drawer and the euros you brought back from a trip all belong in the same sum. So does your share of a joint account. Money you have lent out is a separate question, covered on the ${h.a('zakat-on-debts', 'page on debts')}; money you owe and must pay now is taken off.</p>
 <p>Foreign currency is converted at the rate of your zakat day. The calculator reads the reference rates of the ${h.src('ecb', 'European Central Bank')} each working day, and those of ExchangeRate-API for the currencies the ECB does not publish, so a balance in dollars, pounds or dirhams becomes euros on the same basis as the nisab itself.</p>
 ${h.table(['Where the money is', 'Balance'], rows, 'A household in Lyon on its zakat day. All figures are examples.', ['l', 'r'])}

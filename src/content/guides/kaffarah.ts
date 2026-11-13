@@ -24,7 +24,7 @@ export default defineGuide({
     body: (h) => {
       const t1 = h.tool('kaffarah', { type: 'fast', times: 1, body: 'uae' });
       return `
-<h2>The hadith behind it</h2>
+<h2>The hadith behind kaffarah</h2>
 <p>A man came to the Prophet saying he had been intimate with his wife while fasting in Ramadan. He was asked whether he could free a slave; he could not. Whether he could fast two consecutive months; he could not. Whether he could feed sixty poor people (${h.src('bukhari-1936', 'Sahih al-Bukhari 1936')}). That order, freeing, then fasting, then feeding, is the structure of the kaffarah. With slavery gone, the duty starts at sixty consecutive days of fasting, and the feeding of sixty poor people is for those who cannot manage them.</p>
 
 <h2>Which acts require it: two positions, two amounts</h2>
@@ -57,7 +57,7 @@ ${h.mini('kaffarah', { t: 'Kaffarah with your own meal price', p: ['times', 'per
     title: 'كفارة الصيام 2026: إفساد صوم رمضان عمدًا ومقدار الإطعام',
     description: 'كفارة الصيام 2026 لمن أفسد صوم رمضان عمدًا: صيام شهرين متتابعين أو إطعام ستين مسكينًا، ومقدار مجلس الإمارات للإفتاء لعام 1447، وخلاف المذاهب في الأكل عمدًا.',
     h1: 'كفارة إفساد صوم رمضان',
-    intro: 'اختر إفساد الصوم، وأدخل عدد الكفارات واختر الجهة الرسمية في بلدك، أو اكتب ثمن الوجبة حيث تقيم.',
+    intro: 'اختر إفساد الصيام، وأدخل عدد الكفارات واختر الجهة الرسمية في بلدك، أو اكتب ثمن الوجبة حيث تقيم.',
     resume: `الكفارة الكبرى تجب على من أفسد صوم يوم من رمضان عمدًا بغير عذر، وهي على الترتيب الوارد في حديث البخاري: عتق رقبة، فإن لم يجد فصيام شهرين متتابعين، فإن لم يستطع فإطعام ستين مسكينًا، مع قضاء ذلك اليوم. وقد قدّر مجلس الإمارات للإفتاء الشرعي كفارة إفساد صوم يوم من رمضان لعام 1447 بـ${A.money(60 * A.fitr('uae').kaffarah!, 'AED')} توزع على ستين مسكينًا، لكل مسكين ${A.money(A.fitr('uae').kaffarah!, 'AED')}. واتفق الفقهاء على وجوبها بالجماع في نهار رمضان عمدًا. واختلفوا فيمن أكل أو شرب عمدًا: فالحنفية والمالكية يوجبون عليه القضاء والكفارة، والشافعية لا يوجبون إلا القضاء مع التوبة، وهو ما اختارته دار الإفتاء المصرية. فالفرق بين القولين في الإمارات ${A.money(60 * A.fitr('uae').kaffarah!, 'AED')} أو لا شيء سوى قضاء اليوم. ولم تُعلن مقادير 1448 بعد. ومن عجز عن الصيام عجزًا دائمًا فواجبه الفدية لا الكفارة، وهي أخف منها بكثير.`,
     faqs: [
       { q: 'متى يجوز الانتقال من الصيام إلى الإطعام في كفارة رمضان؟', a: 'إذا عجز المكفّر عن صيام شهرين متتابعين لمرض أو كبر أو مشقة حقيقية. فالترتيب في الحديث واجب: الصيام أولًا، والإطعام بدل عند العجز. ومن قدر على الصيام لكنه استثقله فلا ينتقل إلى الإطعام عند أكثر العلماء، بل يختار وقتًا أيسر عليه كأيام الشتاء القصيرة.' },
@@ -68,7 +68,7 @@ ${h.mini('kaffarah', { t: 'Kaffarah with your own meal price', p: ['times', 'per
       const u = h.fitr('uae');
       const sar = 25, kwd = 2;
       return `
-<h2>أصل الكفارة في السنة</h2>
+<h2>أصل كفارة الصيام في السنة</h2>
 <p>جاء رجل إلى النبي صلى الله عليه وسلم فأخبره أنه وقع على امرأته وهو صائم في رمضان، فسأله: هل تجد رقبة تعتقها؟ قال: لا. قال: فهل تستطيع أن تصوم شهرين متتابعين؟ قال: لا. قال: فهل تجد إطعام ستين مسكينًا؟ (${h.src('bukhari-1936', 'صحيح البخاري 1936')}). فهذا الترتيب هو بناء الكفارة: العتق ثم الصيام ثم الإطعام. ولما انقطع الرق في زماننا صار أول الواجب صيام شهرين متتابعين، ولا يُنتقل إلى إطعام ستين مسكينًا إلا لمن عجز عن الصيام.</p>
 
 <h2>ما الذي يوجبها: قولان ومبلغان</h2>

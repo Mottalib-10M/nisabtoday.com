@@ -14,7 +14,7 @@ export default defineGuide({
     title: 'Zakat in South Africa 2026: Rand Nisab and Two-Pot Savings',
     description: 'Zakat in South Africa for 2026: the nisab in rand at today’s metal prices, how the two-pot savings pot and a tax-free account are counted, with an example.',
     h1: 'Zakat in South Africa, in rand',
-    intro: 'Enter bank balances, tax-free savings and unit trusts, gold, and what you could take from your retirement savings pot this year.',
+    intro: 'Enter your South African bank balances, tax-free savings and unit trusts, gold, and what you could take from your retirement savings pot this year.',
     resume: `In rand, the nisab is ${E.money(E.nisab('silver', 'ZAR'), 'ZAR')} on the silver measure and ${E.money(E.nisab('gold', 'ZAR'), 'ZAR')} on the gold measure at the spot prices of ${E.priceDay}. Zakat is ${E.pct(E.P.rate.lunar)} of the whole once your zakatable wealth reaches the measure you follow. There is no zakat statute in South Africa; communities in Cape Town, Durban and Johannesburg follow their ulama. Since 1 September 2024 the two-pot retirement system has changed one part of the calculation: one third of new retirement contributions goes to a savings component you may draw on once a tax year, with a minimum of R2,000, taxed at your marginal rate, according to SARS. That savings pot is reachable money; the retirement pot is not. A Durban family with ${E.money(54000, 'ZAR')} in the bank, ${E.money(72000, 'ZAR')} in unit trusts and a savings pot of ${E.money(savingsPot, 'ZAR')}, worth about ${E.money(savingsNet, 'ZAR')} after an assumed 26% tax, owes ${E.money(durban.zakat, 'ZAR')}.`,
     faqs: [
       { q: 'Should the two-pot savings component be included in zakat?', a: 'On the view that counts what you can reach, yes: you may withdraw from it once in each tax year, so it is accessible wealth. Enter what you would receive after tax, not the gross balance. Scholars who wait until retirement money is paid out leave it aside until you actually withdraw it.' },
@@ -31,7 +31,7 @@ export default defineGuide({
 <p>The rand price of gold and silver depends on two markets at once: the metal in dollars and the rand against the dollar. When the currency weakens, the nisab in rand rises even if the metal has not moved. At the ${h.src('gold-api', 'spot prices')} of ${h.priceDay} it stands at ${h.money(sZ, 'ZAR')} on ${h.nisabGrams('silver')} g of silver and ${h.money(gZ, 'ZAR')} on ${h.nisabGrams('gold')} g of gold, both from the hadith on five awaq of silver and twenty dinars of gold in ${h.src('bukhari-1447', 'Sahih al-Bukhari')}. Check it on your zakat day rather than relying on last year’s figure.</p>
 ${h.mini('nisab', { t: 'Nisab today in rand', p: ['cur'], d: { cur: 'ZAR' } })}
 
-<h2>The two-pot system, pot by pot</h2>
+<h2>South Africa’s two-pot system, pot by pot</h2>
 <p>From 1 September 2024 retirement fund contributions are split. According to ${h.src('b-sars-twopot', 'SARS')}, one third of a member’s contributions is allocated to the savings component; a member may withdraw a minimum of R2,000 from it once every tax year, and the withdrawal is taxed at the member’s marginal rate, as income. The rest of new contributions goes to the retirement component, kept for retirement, while savings built up before that date remain under the earlier rules of each fund.</p>
 <ul>
 <li><strong>Savings component.</strong> Reachable once a year. Scholars who count accessible retirement money include it, net of the tax you would pay.</li>

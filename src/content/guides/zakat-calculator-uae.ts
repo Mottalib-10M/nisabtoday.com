@@ -14,7 +14,7 @@ export default defineGuide({
     title: 'Zakat in the UAE 2026: Nisab in Dirhams and Fatwa Amounts',
     description: 'Zakat in the UAE for 2026: the nisab in dirhams at today’s price, gold from the souk, the end-of-service gratuity and the 1447 fitr, fidya and kaffarah amounts.',
     h1: 'Zakat in the United Arab Emirates, in dirhams',
-    intro: 'Enter your balances in dirhams, gold by weight and carat, and any gratuity that has already been paid to you.',
+    intro: 'Enter your balances in dirhams, gold by weight and carat, and any end-of-service gratuity already paid to you in the UAE.',
     resume: `At the spot prices of ${E.priceDay}, the nisab in dirhams is ${E.money(E.nisab('silver', 'AED'), 'AED')} on the silver measure and ${E.money(E.nisab('gold', 'AED'), 'AED')} on the gold measure, and zakat is ${E.pct(E.P.rate.lunar)} of zakatable wealth held for a lunar year above it. The UAE Council for Fatwa publishes fixed amounts for the duties of Ramadan. For 1447 it set zakat al-fitr at 2.5 kg of rice a person or ${E.money(u.fitr!, 'AED')} in cash, fidya at ${E.money(u.fidya!, 'AED')} a day, kaffarah for a broken fast at ${E.money(60 * u.kaffarah!, 'AED')} for sixty poor people and kaffarah for an oath at ${E.money(10 * u.kaffarah!, 'AED')} for ten. Many residents are expatriates whose largest future sum is the end-of-service gratuity; on the International Islamic Fiqh Academy’s resolution it is not zakatable while you are still employed. An engineer in Sharjah with ${E.money(58000, 'AED')} saved and 40 g of 22 carat gold bars owes ${E.money(sharjah.zakat, 'AED')} today.`,
     faqs: [
       { q: 'Do I owe zakat on my end-of-service gratuity before I leave my job?', a: 'On the resolution of the International Islamic Fiqh Academy, no: during service the worker does not fully own the benefit. Once it is calculated and paid, or decided and available to you, it joins your zakatable wealth like any other money, and from then on follows the normal year.' },
@@ -29,7 +29,7 @@ export default defineGuide({
       const jewelH = h.zakat({ cur: 'AED', cash: 30000, jewelG: 120, jewelK: 21 });
       const jewelM = h.zakat({ cur: 'AED', cash: 30000, jewelG: 120, jewelK: 21, jewelRule: 'exclude' });
       return `
-<h2>The threshold in dirhams</h2>
+<h2>The UAE zakat threshold in dirhams</h2>
 <p>The nisab in dirhams follows the world price of gold and silver, converted at the exchange rate of the day. At the ${h.src('gold-api', 'spot prices')} of ${h.priceDay}, ${h.nisabGrams('silver')} g of silver is worth ${h.money(sA, 'AED')} and ${h.nisabGrams('gold')} g of gold ${h.money(gA, 'AED')}. Zakat bodies in the Gulf often apply gold to cash, as ${h.src('kuwait-calc', 'Kuwait Zakat House')} does with 85 g of 24 carat gold; many scholars prefer silver. The calculator starts on silver, and a single option switches to gold.</p>
 ${h.mini('nisab', { t: 'Nisab today in dirhams', p: ['cur'], d: { cur: 'AED' } })}
 
