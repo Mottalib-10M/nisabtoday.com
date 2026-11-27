@@ -134,4 +134,6 @@ footer { background: #111111 !important; border-top: 6px solid #CE1126 !importan
 footer, footer *:not(svg, svg *) { color: #E5E7EB !important; border-color: rgba(255,255,255,.18) !important; }
 footer [class*="bg-"]:not(footer) { background: transparent !important; }
 footer a { text-decoration-color: #CE1126 !important; }
+/* bandeau collé à l'en-tête : plus de bande blanche entre la barre du site et le bandeau du titre */
+main > div.max-w-6xl > header:has(h1):first-child { clip-path: inset(-1rem -100vmax 0) !important; }
 /* === fin de la charte du pays === */
